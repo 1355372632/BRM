@@ -2,11 +2,11 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-	<groupId>com.slsd</groupId>
-	<artifactId>ssm</artifactId>
+	<groupId>cn.edu.zjweu</groupId>
+	<artifactId>BRM</artifactId>
 	<packaging>war</packaging>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>ssm Maven Webapp</name>
+	<name>BRM Maven Webapp</name>
 	<url>http://maven.apache.org</url>
 	<!-- 属性: 定义版本的常量,方便修改 -->
 	<properties>
@@ -130,7 +130,7 @@
 		<dependency>
 			<groupId>com.oracle</groupId>
 			<artifactId>ojdbc6</artifactId>
-			<version>11.2.0.1.0</version>
+			<version>11.1.0.7.0</version>
 		</dependency>
 		<!-- 数据库 end -->
 		<!-- 文件上传 -->
@@ -169,6 +169,6 @@
 				</configuration>
 			</plugin>
 		</plugins>
-		<finalName>BRMS</finalName>
+		<finalName>BRM</finalName>
 	</build>
 </project>
