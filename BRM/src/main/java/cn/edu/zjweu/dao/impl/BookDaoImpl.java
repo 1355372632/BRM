@@ -2,6 +2,7 @@ package cn.edu.zjweu.dao.impl;
 
 import java.util.List;
 import cn.edu.zjweu.dao.BookDao;
+import cn.edu.zjweu.entity.Book;
 /**
  * 
 * @ClassName: BookDaoImpl
@@ -71,6 +72,12 @@ public class BookDaoImpl implements BookDao {
 	public Book getBookByBookID(String bookid) {
 		// TODO Auto-generated method stub
 		return null;
+	}
+
+	@Override
+	public int getBookHits() {
+		// TODO Auto-generated method stub
+		return 0;
 	}
 
 }

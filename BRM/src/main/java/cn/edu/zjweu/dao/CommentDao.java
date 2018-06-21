@@ -1,4 +1,9 @@
 package cn.edu.zjweu.dao;
+
+import java.util.List;
+
+import cn.edu.zjweu.entity.Comment;
+
 /**
  * 
 * @ClassName: CommentDao
@@ -10,9 +15,9 @@ package cn.edu.zjweu.dao;
 public interface CommentDao {
 	public List<Comment> getAllComments();//获取所有评论
 	
-	public List<Commemt> getCommentsByBookId(String bookid);//查询书籍类型下所有评论
+	public List<Comment> getCommentsByBookId(String bookid);//查询书籍类型下所有评论
 	
-	public List<Commemt> getCommentsByInid(String inid);//查询评论下二次评论
+	public List<Comment> getCommentsByInid(String inid);//查询评论下二次评论
 	
 	public boolean addComment(Comment comment);//添加评论
 	

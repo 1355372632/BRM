@@ -2,7 +2,7 @@ package cn.edu.zjweu.dao;
 
 import java.util.List;
 
-import entity.Books;
+import cn.edu.zjweu.entity.Book;
 
 /**
  * 
