@@ -1,6 +1,7 @@
 package cn.edu.zjweu.entity;
 
 import java.sql.Date;
+import java.util.List;
 
 /**
  * 评论表
@@ -8,14 +9,31 @@ import java.sql.Date;
  *
  */
 public class Comment {
-	private int commentID; 
-	private String userID; 
-	private Date commentDate;
-	private String content;
-	private int INID;
-	private int bookID;
-	private int cReported;
-	private int hits;
+	private int commentID; //评论编号
+	private String userID; //评论用户
+	private Date commentDate;//评论时间
+	private String content;//评论内容
+	private int INID;//父评论编号  外键
+	private int bookID;//书籍id外键
+	private int cReported;//被举报次数
+	private int hits;//点击量
+	
+	private List<Comment> comment;//存放子评论
+	
+	/**
+	 * 获取子评论
+	 * @return list
+	 */
+	public List<Comment> getComment() {
+		return comment;
+	}
+	/**
+	 * 存放子评论
+	 * @param comment
+	 */
+	public void setComment(List<Comment> comment) {
+		this.comment = comment;
+	}
 	public int getCommentID() {
 		return commentID;
 	}

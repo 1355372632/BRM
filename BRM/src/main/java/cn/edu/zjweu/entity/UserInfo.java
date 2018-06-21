@@ -8,7 +8,7 @@ import java.sql.Date;
  * @author yin
  *
  */
-public class UserInfo {
+public class UserInfo{
 	private int uInfoID;//用户编号 主键 自增UserinfoSequence
 	private String userID;//用户名（数字和字母）外键
 	private String uName;//昵称
@@ -19,6 +19,9 @@ public class UserInfo {
 	private String uMarry;//婚姻
 	private Date uBirthDay;//生日
 	private String uHobby;//兴趣爱好
+	
+	
+	
 	
 	public UserInfo() {
 		super();

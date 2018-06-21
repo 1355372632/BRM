@@ -9,6 +9,9 @@ public class User {
 	private String uPwd;//密码
 	private String uEmail;//用户邮箱
 	private int uType;//用户类型：0最高权限管理员，1管理员，2用户（注册成功）
+	
+	private UserInfo userinfo;//获取用户时，同时获取用户的详细信息
+	
 	public User() {
 		super();
 		// TODO Auto-generated constructor stub
@@ -43,6 +46,12 @@ public class User {
 	}
 	public void setuType(int uType) {
 		this.uType = uType;
+	}
+	public UserInfo getUserinfo() {
+		return userinfo;
+	}
+	public void setUserinfo(UserInfo userinfo) {
+		this.userinfo = userinfo;
 	}
 	
 	

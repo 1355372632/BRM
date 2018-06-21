@@ -6,6 +6,7 @@ package cn.edu.zjweu.entity;
  */
 
 import java.sql.Date;
+import java.util.List;
 
 public class Book {
 	private int bookID;//type *10000+主键 非自增
@@ -19,6 +20,16 @@ public class Book {
 	private String bPicPath;//书籍封面路径
 	private int hits;//点击量
 	private int bookState;//书籍状态0连载，1完结
+	
+	private List<Section> sections;//获取书籍时获取所有章节列表
+	
+	
+	public List<Section> getSections() {
+		return sections;
+	}
+	public void setSections(List<Section> sections) {
+		this.sections = sections;
+	}
 	public int getBookID() {
 		return bookID;
 	}
