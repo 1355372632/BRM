@@ -1,0 +1,95 @@
+.admintop{
+	margin-top: 15px;
+	margin-left: 15px;
+	padding-bottom: 15px;
+	border-bottom: lightgray solid 1px;
+}
+.admintopname{
+	font-size: 28px;
+}
+.admintopname a{
+	display: inline-block;
+	margin-left: 15px;
+	font-size: 16px;
+	border-radius: 1.2rem;
+	padding: 0 5px;
+	background: hotpink;
+	color: white;
+	text-decoration: none;
+}
+.admintopname a:hover{
+	text-decoration: underline;
+}
+.admintopmsg{
+	margin-top: 10px;
+	color: gray;
+}
+.moodform{
+	position: relative;
+	margin: 10px 0;
+	padding: 10px 15px;
+}
+.moodtextarea{
+	color: gray;
+	resize: none;
+	height: 70px;
+	width: 400px;
+}
+#moodsubmit{
+	display: inline-block;
+	position: absolute;
+	width: 90px;
+	height: 75px;
+	background: hotpink;
+	color: white;
+	margin: 0 40px;
+	border: 0px;
+}
+#moodsubmit:hover{
+	background: deeppink;
+}
+.admintitle{
+	font-size: 20px;
+	margin: 0 15px;
+	padding: 10px 0;
+	border-bottom: lightgray solid 1px;
+}
+.admintitle span{
+	padding: 0 10px;
+	border-left: pink solid 5px;
+}
+.admininfo{
+	margin: 15px 15px;
+}
+.admininfo table{
+	display: block;
+	width: 100%;
+}
+.admininfo table td{
+	display: table-cell;
+	width: 500px;
+	height: 50%;
+}
+.latest{
+	position: relative;
+}
+.latest ul{
+	list-style: circle;
+	margin: 10px 0;
+}
+.latest li{
+	margin: 7px 0;
+}
+.latest a{
+	text-decoration: none;
+	color: orange;
+}
+.latest a:hover{
+	text-decoration: underline;
+}
+.latestdate{
+	display: inline-block;
+	position: absolute;
+	right: 20px;
+	color: gray;
+}

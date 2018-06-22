@@ -1,0 +1,68 @@
+.workinfo table{
+	height: 100%;
+	width: 100%;
+	margin: 20px 0;
+	table-layout: fixed;
+}
+.workinfo table td{
+	padding: 0;
+	width: 25%;
+	height: 230px;
+	vertical-align: top;
+}
+.workinfo table td img{
+	display: block;
+	margin: 0;
+	height: 80%;
+	width: 100%;
+}
+.book_info{
+	width: 70%;
+	float: left;
+}
+.bookinfo{
+	display: block;
+	margin: 0 5px;
+	width: 100%;
+	font-size: 13px;
+	overflow:hidden;
+	white-space:nowrap;
+	text-overflow:ellipsis;
+	text-decoration: none;
+	color: black;
+}
+.book_title:hover{
+	color: orange;
+}
+.book_author:hover{
+	color: blue;
+}
+.book_edit{
+	width: 25%;
+	font-size: 13px;
+	float: right;
+}
+.bookedit{
+	display: block;
+	text-decoration: none;
+}
+.pagecontain{
+	text-align: center;
+	color: gray;
+}
+.edittitle{
+	height: 90px;
+}
+.infotitle a{
+	display: inline-block;
+	float: right;
+	margin: 0 5px;
+	padding: 0 5px;
+	border-radius: 0.8rem;
+	color: white;
+	background: hotpink;
+	text-decoration: none;
+}
+.infotitle a:hover{
+	text-decoration: underline;
+}

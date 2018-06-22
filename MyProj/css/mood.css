@@ -1,0 +1,30 @@
+.mood_right{
+	height: 400px;
+}
+.spacetitle{
+	margin: 15px 15px;
+}
+.moodnote{
+	margin: 0 15px;
+}
+.moodnote dl{
+	margin: 0;
+}
+.moodnote dt{
+	line-height: 30px;
+}
+.moodnote a{
+	text-decoration: none;
+	color: royalblue;
+}
+.notedate{
+	color: darkgray;
+}
+.pagecontain{
+	width: 100%;
+	text-align: center;
+	margin: auto;
+	color: darkgray;
+	position: absolute;
+	bottom: 10px;
+}

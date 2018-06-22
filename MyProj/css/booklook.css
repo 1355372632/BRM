@@ -1,0 +1,324 @@
+.bookbox{
+	position: relative;
+	/*height: 100%;*/
+}
+.bookbg{
+	background: lightyellow;
+}
+.booktop{
+	height: 60px;
+	min-width: 900px;
+}
+.bookmenubg{
+	height: 60px;
+	background: black;
+	opacity: 0.8;
+}
+.menu{
+	position: fixed;
+	height: 60px;
+	left: 200px;
+	margin-top: 5px;
+}
+.menu > dl > dt{
+	display: inline-block;
+	margin-left: 15px;
+	height: 50px;
+}
+.menu > dl > dt > a{
+	padding: 5px;
+	border-radius: 0.6rem;
+	text-decoration: none;
+	color: white;
+}
+.menu > dl > dt > a:hover{
+	color: black;
+	background: white;
+}
+.menu dl > dt:hover .sub{
+	visibility: visible;
+}
+.sub{
+	position: absolute;
+	visibility: hidden;
+	width: 100px;
+	text-align: center;
+	margin-left: -1.7%;
+	margin-top: 25px;
+}
+.sub dt {
+	margin-top: 5px;
+	line-height: 25px;
+}
+.sub a{
+	margin: auto;
+	display: block;
+	padding: 5px;
+	background: white;
+	border: black solid 1px;
+	border-radius: 0.6rem;
+	text-decoration: none;
+	color: black;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow:ellipsis;
+}
+.sub a:hover{
+	font-size: 20px;
+	color: red;
+}
+.bookmain{
+	margin: 180px auto;
+	width: 1000px;
+	border: lightgray solid 1px;
+	box-shadow: 0px 0px 3px gray;
+	background: white;
+}
+.test{
+	width: 100%;
+	position: relative;
+	border: solid 1px;
+}
+.book-information{
+	position: relative;
+	height: 320px;
+}
+.book-img{
+	height: 250px;
+	width: 200px;
+	margin: 30px 30px 0 80px;
+	box-shadow: 0px 0px 3px gray;
+	float: left;
+}
+.book-img img{
+	height: 100%;
+	width: 100%;
+}
+.book-info{
+	position: relative;
+	margin: 30px 0;
+	width: 600px;
+	height: 250px;
+	float: left;
+}
+h1{
+	margin: 0;
+}
+.bookauthor{
+	font-weight: 400;
+	margin-left: 20px;
+	font-size: 16px;
+}
+.bookauthor a{
+	position: relative;
+	display: inline-block;
+	width: 50px;
+	text-decoration: none;
+	color: black;
+	padding: 5px;
+}
+.bookauthor a:hover{
+	color: red;
+}
+.book-desc{
+	display: block;
+	height: 120px;
+	margin: 20px 0;
+}
+.bookbtn{
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+}
+.book-btn{
+	width: 120px;
+	height: 40px;
+	background: #F38E81;
+	color: white;
+	border: 0;
+}
+.book-btn:hover{
+	background: #EC7E70;
+}
+.book-download{
+	position: absolute;
+	right: 0;
+}
+.readsec{
+	margin: 0 80px;
+	height: 35px;
+	border-bottom: gray solid 2px;
+}
+.readsec dt{
+	float: left;
+	padding: 0 10px;
+	font-size: 24px;
+	color: black;
+}
+.readsec dt a{
+	display: inline-block;
+	height: 35px;
+	text-decoration: none;
+	color: black;
+}
+.readsec dt .dec{
+	color: red;
+	border-bottom: red solid 3px;
+}
+.readsec dt a:hover{
+	color: red;
+	border-bottom: red solid 3px;
+}
+.derectory{
+	position: absolute;
+	width: 100%;
+	padding-bottom: 50px;
+	border-bottom: lightgray solid 3px;
+	border-left: lightgray solid 3px;
+	border-right: lightgray solid 3px;
+	margin-left: -3px;
+	background: white;
+}
+.derectory h3{
+	margin: 0 80px;
+	padding: 10px 0;
+	width: ;
+	border-bottom: solid 1px;
+}
+.derectory dl{
+	margin: 0 80px;
+}
+.derectory dt{
+	display: inline-block;
+	border-bottom: lightgray solid 1px;
+	float: left;
+	width: 25%;
+	line-height: 35px;
+}
+.derectory dt a{
+	text-decoration: none;
+	color: black;
+}
+.derectory dt a:hover{
+	color: red;
+}
+.review{
+	position: absolute;
+	width: 100%;
+	visibility: hidden;
+	margin-left: -3px;
+	margin-bottom: 30px;
+	border-left: lightgray solid 3px;
+	border-right: lightgray solid 3px;
+	border-bottom: lightgray solid 3px;
+	background: white;
+	padding-bottom: 100px;
+	margin-bottom: 150px;
+}
+.review > dl{
+	margin: 0 80px;
+}
+.review .revnav{
+	margin-top: 15px;
+}
+.review .revnav dt{
+	padding: 10px 10px;
+	background: lightyellow;
+}
+.review .revnav a{
+	color: red;
+	font-weight: 600;
+	font-size: 14px;
+	text-decoration: none;
+}
+.review .revnav .sendrev{
+	float: right;
+	color: black;
+}
+.review .revnav .sendrev:hover{
+	color: red;
+}
+.usericon{
+	position: relative;
+	display: inline-block;
+	height: 60px;
+	width: 60px;
+	float: left;
+	margin: 20px 0;
+}
+.usericon img{
+	width: 100%;
+	height: 100%;
+	border-radius: 50%;
+}
+
+.review-post{
+	padding: 5px 20px 0;
+	border-bottom: lightgray solid 1px;
+}
+.revpart{
+	position: relative;
+	display: inline-block;
+	width: 85%;
+	margin: 20px 15px;
+}
+.revpart dl{
+	margin: 0;
+	padding: 0;
+}
+.revpart dl dt{
+	font-size: 14px;
+}
+.revpart span{
+	color: darkgray;
+}
+.revpart .username{
+	margin: 0;
+	padding: 0;
+	text-decoration: none;
+}
+.revpart a{
+	text-decoration: none;
+}
+.revpart .username:hover{
+	text-decoration: underline;
+}
+.revpart .ablock{
+	display: block;
+	height: 30px;
+}
+.textpost{
+	position: relative;
+	margin: 5px 0;
+}
+.textpost a{
+	color: black;
+}
+.flo{
+	display: inline-block;
+}
+.todo{
+	position: absolute;
+	right: 0;
+	display: inline-block;
+}
+.search{
+	position: fixed;
+	right: 50px;
+	z-index: 2;
+	margin-top: 10px;
+}
+.serchlog{
+	display: inline-block;
+	border: white solid 1px;
+}
+.serchlog img{
+	display: block;
+	height: 27px;
+}
+.searchText{
+	display: inline-block;
+	vertical-align: top;
+	font-size: 20px;
+}
+
