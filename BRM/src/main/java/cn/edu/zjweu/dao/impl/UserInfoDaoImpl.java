@@ -10,7 +10,7 @@ import org.springframework.stereotype.Repository;
 import cn.edu.zjweu.dao.UserInfoDao;
 import cn.edu.zjweu.entity.UserInfo;
 
-@Repository("UserInfoDao")
+@Repository("userinfoDao")
 public class UserInfoDaoImpl extends SqlSessionDaoSupport implements UserInfoDao {
 
 	

@@ -8,14 +8,14 @@ import cn.edu.zjweu.dao.UserInfoDao;
 import cn.edu.zjweu.entity.UserInfo;
 import cn.edu.zjweu.service.UserInfoService;
 
-@Service("UserInfoService")
+@Service("userinfoService")
 public class UserInfoServiceImpl implements UserInfoService {
 	@Resource
-	private UserInfoDao uid;
+	private UserInfoDao userinfoDao;
 	
 
 	public UserInfo getUserInfo(String userid) {
 		System.out.println("userinfoservce+"+userid);
-		return uid.getUserInfo(userid);
+		return userinfoDao.getUserInfo(userid);
 	}
 }
