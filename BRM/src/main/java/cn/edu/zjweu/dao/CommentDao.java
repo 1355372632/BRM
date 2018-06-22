@@ -13,6 +13,7 @@ import cn.edu.zjweu.entity.Comment;
 *
  */
 public interface CommentDao {
+	
 	public List<Comment> getAllComments();//获取所有评论
 	
 	public List<Comment> getCommentsByBookId(String bookid);//查询书籍类型下所有评论
