@@ -1,0 +1,93 @@
+.intro-edit {
+	/*border: black solid 1px;*/
+}
+
+.block-name {
+	font-size: 20px;
+	padding: 10px 0;
+	border-bottom: lightgray solid 1px;
+}
+
+.block-name span {
+	padding: 0 10px;
+	border-left: pink solid 5px;
+}
+
+.introedit {
+	display: block;
+	margin: auto;
+	width: 80%;
+	height: 100px;
+	resize: none;
+	overflow-x: hidden;
+}
+
+.button {
+	display: block;
+	margin: auto;
+	width: 120px;
+	height: 30px;
+	background: #F38E81;
+	border: 0;
+	color: white;
+	box-shadow: 0 0 5px #EC7E70;
+}
+.chap-edit{
+	position: relative;
+}
+.chap-list{
+	/*border: black solid 1px;*/
+}
+.chap-list dl{
+	display: block;
+	/*border: black solid 1px;*/
+	padding: 0;
+}
+.chap-list dt{
+	display: inline-block;
+	margin: 0;
+	padding: 0;
+	width: 23%;
+	/*border: black solid 1px;*/
+}
+.chap-list dt a{
+	text-decoration: none;
+	color: black;
+}
+.chap-list dt a:hover{
+	color: red;
+}
+.chapedit{
+	margin-top: 15px;
+	/*border: black solid 1px;*/
+}
+.chapedit span{
+	position: absolute;
+	margin-left: 15px;
+	display: inline-block;
+	margin-top: 5px;
+	vertical-align: top;
+	/*border: black solid 1px;*/
+}
+#chapName{
+	display: inline-block;
+	vertical-align: top;
+	/*margin-top: 2px;*/
+	margin-left: 28%;
+	margin-top: 5px;
+	height: 18px;
+	width: 352px;
+	font-size: 20px;
+}
+#chapedit{
+	display: inline-block;
+	overflow-x: hidden;
+	resize: none;
+	margin-top: 5px;
+	margin-left: 28%;
+	width: 350px;
+	height: 300px;
+}
+p{
+	text-align: center;
+}

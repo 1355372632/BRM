@@ -1,0 +1,73 @@
+.readmain{
+	margin-top: 100px;
+	background: ghostwhite;
+}
+.readmain .btn{
+	display: inline-block;
+	text-decoration: none;
+	color: white;
+	margin: 10px 0;
+	background: #F38E81;
+	padding: 10px;
+	width: 100px;
+	text-align: center;
+	font-size: 16px;
+	font-weight: 700;
+	border: solid 1px;
+	border-radius: 0.5rem;
+}
+.readmain .btn:hover{
+	background: #EC7E70;
+}
+.readsec{
+	position: relative;
+	height: 60px;
+	border: none;
+	
+}
+.prevbtn{
+	
+}
+.returndec{
+	position: absolute;
+	left: 45%;
+}
+.nextbtn{
+	position: absolute;
+	right: 0;
+}
+.read-author{
+	margin-left: 0;
+}
+.chapname{
+	display: block;
+	margin: 50px 50px 0;
+	padding-bottom: 50px;
+	border-bottom: darkgray dashed 1px;
+	text-align: center;
+}
+.toTop{
+	position: fixed;
+	right: 0px;
+	top: 50%;
+	display: block;
+	height: 70px;
+	width: 60px;
+	text-align: center;
+	text-decoration: none;
+	color: black;
+	background: white;
+	box-shadow: 0 0 3px gray;
+	z-index: 999;
+}
+.toTop span{
+	display: inline-block;
+	width: 100%;
+	margin-top: 5px;
+}
+.content{
+	width: 80%;
+	margin: auto;
+	font-family: "黑体";
+	font-size: 20px;
+}

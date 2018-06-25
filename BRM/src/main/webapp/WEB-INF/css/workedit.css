@@ -1,0 +1,72 @@
+.workinfo .book{
+	/*width: 150px;
+	height: 250px;*/
+	float: left;
+	margin: 0 30px 0 0;
+}
+.imgbox{
+	padding: 0;
+	width: 150px;
+	height: 200px;
+	vertical-align: top;
+}
+.checkedit{
+	position: relative;
+}
+.workinfo img{
+	display: block;
+	margin: 0;
+	height: 100%;
+	width: 100%;
+}
+.book_info{
+	/*width: 70%;*/
+	display: inline-block;
+}
+.bookinfo{
+	display: block;
+	margin: 0 5px;
+	font-size: 13px;
+	overflow:hidden;
+	white-space:nowrap;
+	text-overflow:ellipsis;
+	text-decoration: none;
+	color: black;
+}
+.book_title:hover{
+	color: orange;
+}
+.book_author:hover{
+	color: blue;
+}
+.book_edit{
+	/*width: 25%;*/
+	position: absolute;
+	font-size: 13px;
+	right: 0;
+	top: 0;
+}
+.bookedit{
+	display: block;
+	text-decoration: none;
+}
+.pagecontain{
+	text-align: center;
+	color: gray;
+}
+.edittitle{
+	height: 90px;
+}
+.infotitle a{
+	display: inline-block;
+	float: right;
+	margin: 0 5px;
+	padding: 0 5px;
+	border-radius: 0.8rem;
+	color: white;
+	background: hotpink;
+	text-decoration: none;
+}
+.infotitle a:hover{
+	text-decoration: underline;
+}

@@ -1,0 +1,254 @@
+body {
+	margin: 0px;
+	padding: 0px;	
+}
+.box{
+	width: 100%;
+	padding-bottom: 30px;
+	position: relative;
+}
+.indexbox{
+	height: 2400px;
+}
+.bg{
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	background-image: url(../img/main/路人女主.jpg);
+	background-size: 100% 100%;
+}
+.top_box{
+	width: 100%;
+	min-width: 1800px;
+	height: 230px;
+	min-height: 200px;
+	position: relative;
+	z-index: 999;
+}
+.top_box:hover #logo{
+	opacity:0.9;
+}
+.top_bg{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	background-image: url(../img/main/top.png);
+	background-repeat: no-repeat;
+	background-size:100% 100%;
+	/*opacity:1;*/
+}
+#logo{
+	width: 500px;
+	height: 70%;
+	left: 15%;
+	bottom: 0px;
+	position: absolute;
+	background: url(../img/Logo.png) no-repeat 0 50%;
+	background-size: contain;
+	z-index: 2;
+	opacity: 0.6;
+}
+.top_menu{
+	height: 55px;
+	position: fixed;
+	z-index: 999;
+	top: 0px;
+	text-shadow: 2px 2px 8px #000;
+}
+.menu_bg{
+	width: 100%;
+	height: 55px;
+	position: fixed;
+	background: ghostwhite;
+	/*filter:alpha(opacity:40); opacity:0.4;  -moz-opacity:0.4; -khtml-opacity: 0.4;*/
+	opacity:0.4;
+}
+.menu_bg:hover{
+	opacity: 0.6;
+}
+.menu{
+	margin-left: 250px;
+	padding: 0px;
+}
+.menu > dt{
+	padding-bottom: 20px;
+	/*border: black solid 1px;*/
+	line-height: 1.5rem;
+	font-size: 1.2rem;
+	display:inline-block;
+}
+.menu > dt > a > span{
+	padding: 1px 0.5rem;
+	margin-left: 15px;
+	display: inline-block;
+	/*border: black solid 1px;*/
+}
+.menu a{
+	text-decoration: none;
+	color: black;
+}
+.sub{
+	margin-top: 12px;
+	margin-left: 0px;
+	/*border: black solid 1px;*/
+	position: absolute;
+	visibility: hidden;
+}
+.sub dt{
+	margin-top: 0px;
+	margin-left: -20px;
+	padding: 10px;
+	width: 140px;
+	background: gray;
+	/*filter:alpha(opacity:60); opacity:0.6;  -moz-opacity:0.6; -khtml-opacity: 0.6;*/
+	opacity:0.8;
+	text-align: center;
+	border-bottom: lightgray solid 1px;
+}
+.sub dt a{
+	color: white;
+}
+.menu > dt:hover .sub{
+	opacity: 1;
+	transition-delay: 0.2s;
+	visibility:visible;
+}
+.menu > dt a:hover{
+	color: white;
+}
+.sub dt a:hover{
+	color: lightpink;
+	font-size: 20px;
+}
+.sub span{
+	padding: 1px 0.5rem;
+}
+.menu > dt a:hover span{
+	border-radius: 1rem;
+	background: cornflowerblue;
+}
+.search{
+	position: fixed;
+	top: 10px;
+	right: 50px;
+	z-index: 999;
+}
+.search table{
+	border-collapse: collapse;
+	/*border: black solid 1px;*/
+	padding: 0px;
+	margin: 0px;
+}
+#search_text{
+	width: 250px;
+	height: 30px;
+}
+#search_text input{
+	height: 100%;
+	width: 100%;
+	border: 0px;
+	font-size: 16px;
+	color: lightgray;
+}
+#search_img{
+	width: 30px;
+	height: 30px;
+	background: white;
+}
+#search_img img{
+	height: 100%;
+	width: 100%;
+}
+
+.main{
+	margin: auto;
+	position: relative;
+	width: 1200px;
+}
+#mid{
+	position: relative;
+	margin-top: 50px;
+	width: 100%;
+	/*height: 3000px;*/
+}
+.bottom{
+	bottom: 0;
+	position: absolute;
+	width: 100%;
+	min-width: 1800px;
+	height: 300px;
+	margin-top: 200px;
+}
+.bottom_bg{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background: white;
+	opacity: 0.5;
+}
+.bottom_container{
+	position: relative;
+	width: 70%;
+	height: 85%;
+	/*border: black solid 1px;*/
+	margin: 15px auto;
+}
+.bottom_container > dl{
+	margin: 25px auto;
+	display: block;
+	position: relative;
+	height: 80%;
+	width: 95%;
+	/*border: black solid 1px;*/
+}
+.bottom_container > dl > dt{
+	position: relative;
+	float: left;
+	height: 90%;
+	width: 33%;
+	margin: 20px 0;
+	padding: 0;
+	border-left: black dashed 1px;
+}
+.bottom_container > dl > dt > dl{
+	position: relative;
+	margin: 40px 0;
+	padding: 0;
+	/*border: black solid 1px;*/
+}
+.bottom_container > dl > dt > dl > dt{
+	position: relative;
+	height: 30px;
+	display: block;
+	/*border: black solid 1px;*/
+}
+.bottom_name{
+	display: inline-block;
+	margin-left: 60px;
+	font-size: 20px;
+}
+.bottomText{
+	position: absolute;
+	display: block;
+	margin-left: 60px;
+	width: 70%;
+	/*border: black solid 1px;*/
+}
+.bottomText span {
+	position: relative;
+	margin: 3px 3px;
+	width: 80px;
+	display: inline-block;
+	/*border: black solid 1px;*/
+}
+.bottomText span a{
+	position: relative;
+	display: inline-block;
+	color: gray;
+	text-decoration: none;
+	/*border: black solid 1px;*/
+}
+.bottomText span a:hover{
+	color: cornflowerblue;
+	text-shadow: 1px 1px 30px;
+}

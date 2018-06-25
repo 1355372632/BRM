@@ -1,0 +1,12 @@
+.userinfo{
+	/*border: solid 1px;*/
+	margin: 0 15px;
+}
+.userinfo dt{
+	margin: 5px 0;
+	position: relative;
+}
+.userinfo dt a{
+	float: right;
+	padding-left: 15px;
+}

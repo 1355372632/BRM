@@ -1,0 +1,78 @@
+.book_upload table{
+	width: 100%;
+	margin-top: 5px;
+}
+.book_upload table th{
+	padding-top: 5px;
+	vertical-align: text-top;
+	color: gray;
+	font-size: 18px;
+	font-weight: 200;
+}
+.newbook{
+	height: 30px;
+}
+.bookname{
+	width: 90%;
+}
+.typeselec{
+	width: 120px;
+	font-size: 18px;
+}
+.cropped{
+	height: 30px;
+}
+.imageBox{
+	margin-left: 40px;
+	height: 250px;
+}
+.container{
+	margin-top: 5px;
+	height: 320px;
+	position: relative;
+}
+.action{
+	margin-left: 40px;
+	margin-top: 30px;
+}
+.imageBox .thumbBox{
+	width: 200px;
+	height: 250px;
+	top: 40.5%;
+	left: 50%;
+}
+.bookdesc{
+	resize: none;
+	width: 90%;
+	height: 150px;
+}
+.booksubmit{
+	display: inline-block;
+	position: absolute;
+	right: 60px;
+	bottom: 9px;
+	width: 120px;
+	height: 30px;
+	background: #F38E81;
+	border: 0;
+	color: white;
+	box-shadow: 0 0 5px #EC7E70;
+}
+.booksubmit:hover{
+	background: #EC7E70;
+}
+.newchap{
+	height: 400px;
+}
+.chapsubmit{
+	display: inline-block;
+	position: absolute;
+	right: 170px;
+	bottom: 30px;
+	width: 120px;
+	height: 30px;
+	background: #F38E81;
+	border: 0;
+	color: white;
+	box-shadow: 0 0 5px #EC7E70;
+}

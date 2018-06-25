@@ -1,0 +1,218 @@
+.a_row{
+	margin-top: 30px;
+	position: relative;
+	float: left;
+	width: 100%;
+	height: 400px;
+}
+.nov_light{
+	position: relative;
+	float: left;
+	border-radius: 0.3rem;
+	width:70%;
+	height: 400px;
+}
+.order{
+	position: relative;
+	border-radius: 0.3rem;
+	float: right;
+	width: 28%;
+	height: 100%;
+	background: white;
+	opacity: 0.5;
+}
+.order:hover{
+	opacity: 0.9;
+}
+#online_order{
+	margin-top: 20px;
+}
+.order a {
+	text-decoration: none;
+	color: black;
+	display: block;
+	margin-left: 20px;
+	margin-top: 10px;
+}
+.order a:hover{
+	color: blue;
+	text-shadow: 1px 1px 30px;
+}
+.order a span{
+	display: block;
+}
+.nov_online{
+	position: relative;
+	float: left;
+	width: 70%;
+	height: 100%;
+	margin-top: 20px;
+	box-shadow: 1px 1px 5px;
+}
+.nov_online:hover{
+	box-shadow: 5px 3px 60px;
+}
+.online_bg{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	background: white;
+	border-radius: 0.3rem;
+	opacity: 0.5;
+}
+.online_contain{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	
+}
+.trent-slider{
+	border-radius: 0.3rem;
+}
+.t-slide img{
+	width: 100%;
+	height: 100%;
+	position: relative;
+}
+.t-slide a{
+	text-decoration: none;
+	position: absolute;
+	opacity: 0.7;
+}
+.t-slide a:hover{
+	border: orange solid 2px;
+	opacity: 1;
+}
+.t-slide span{
+	position: absolute;
+	font-size: 20px;
+	bottom: 5px;
+	right: 10px;
+	padding: 0 3px;
+	color: white;
+	text-shadow: 2px 2px 5px #000000;
+}
+.t-slide span:hover{
+	border-radius: 1rem;
+	background: cornflowerblue;
+}
+.slide_left,.slide_mid,.slide_right{
+	width: 33.3%;
+	height: 100%;
+}
+.slide_left{
+	float: left;
+	position: relative;
+}
+.slide_left a{
+	width: 100%;
+	height: 100%;
+}
+.slide_mid{
+	position: relative;
+	float: left;
+	background: white;
+}
+.slide_mid a{
+	width: 50%;
+	height: 50%;
+}
+.slide_mid .mid_2{
+	right: 0;
+}
+.slide_mid .mid_3{
+	bottom: 0;
+}
+.slide_mid .mid_4{
+	right: 0;
+	bottom: 0;
+}
+.slide_right{
+	position: relative;
+	width: 33.4%;
+	float: right;
+}
+.slide_right a{
+	width: 100%;
+	height: 100%;
+}
+
+.nov_online .title{
+	margin-top: 30px;
+	margin-left: 30px;
+	position: relative;
+}
+.title{
+	display: block;
+	margin: 10px 15px;
+	/*border: black solid 1px;*/
+}
+.title span{
+	font-size: 24px;
+}
+.title span b{
+	font-size: 30px;
+}
+.name{
+	position: absolute;
+	display: inline-block;
+	top: 2px;
+	left: 30px;
+}
+.online_books{
+	position: relative;
+	float: left;
+	width: 20%;
+	height: 50%;
+	margin-left: 30px;
+}
+.online_books img{
+	width: 100%;
+	height: 80%;
+	position: relative;
+}
+.online_books a{
+	text-decoration: none;
+}
+.online_books a span{
+	display: block;
+	color: black;
+}
+.book_title:hover{
+	color: red;
+}
+.author{
+	display: block;
+	margin-top: 5px;
+	font-size: 12px;
+	color: gray;
+}
+
+.discussion_contain_left,.discussion_contain_right{
+	position: relative;
+	width: 50%;
+}
+.discussion_contain_left{
+	float: left;
+}
+.discussion_contain_right{
+	float: right;
+}
+.discussion{
+	position: relative;
+	width: 89%;
+	margin: 30px 30px;
+	/*border: black solid 1px;*/
+}
+.discussion dt{
+	display: inline-block;
+	padding: 2px;
+}
+.discussion a{
+	text-decoration: none;
+	color: black;
+}
+.discussion a:hover{
+	color: blue;
+	text-shadow: 1px 1px 30px;
+}
