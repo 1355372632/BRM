@@ -4,7 +4,7 @@ package cn.edu.zjweu.entity;
  * @author yin
  *
  */
-public class User {
+public class Users {
 	private String userID;//用户id
 	private String uPwd;//密码
 	private String uEmail;//用户邮箱
@@ -12,11 +12,11 @@ public class User {
 	
 	private UserInfo userinfo;//获取用户时，同时获取用户的详细信息
 	
-	public User() {
+	public Users() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
-	public User(String userID, String uPwd, String uEmail, int uType) {
+	public Users(String userID, String uPwd, String uEmail, int uType) {
 		super();
 		this.userID = userID;
 		this.uPwd = uPwd;
@@ -52,6 +52,11 @@ public class User {
 	}
 	public void setUserinfo(UserInfo userinfo) {
 		this.userinfo = userinfo;
+	}
+	@Override
+	public String toString() {
+		return "Users [userID=" + userID + ", uPwd=" + uPwd + ", uEmail=" + uEmail + ", uType=" + uType + ", userinfo="
+				+ userinfo + "]";
 	}
 	
 	

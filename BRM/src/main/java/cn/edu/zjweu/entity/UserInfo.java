@@ -109,6 +109,13 @@ public class UserInfo{
 		this.uBirthDay = uBirthDay;
 		this.uHobby = uHobby;
 	}
+
+	@Override
+	public String toString() {
+		return "UserInfo [uInfoID=" + uInfoID + ", userID=" + userID + ", uName=" + uName + ", uState=" + uState
+				+ ", uPicPath=" + uPicPath + ", uDesc=" + uDesc + ", uSex=" + uSex + ", uMarry=" + uMarry
+				+ ", uBirthDay=" + uBirthDay + ", uHobby=" + uHobby + "]";
+	}
 	
 	
 	
