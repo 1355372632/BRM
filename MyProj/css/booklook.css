@@ -35,6 +35,10 @@
 	color: black;
 	background: white;
 }
+.menu .active{
+	color: black;
+	background: white;
+}
 .menu dl > dt:hover .sub{
 	visibility: visible;
 }
@@ -262,11 +266,7 @@ h1{
 	width: 85%;
 	margin: 20px 15px;
 }
-.revpart dl{
-	margin: 0;
-	padding: 0;
-}
-.revpart dl dt{
+.revpart a{
 	font-size: 14px;
 }
 .revpart span{

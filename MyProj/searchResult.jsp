@@ -3,7 +3,7 @@
 
 	<head>
 		<meta charset="UTF-8">
-		<title>轻小说</title>
+		<title>"***"的搜索结果</title>
 		<link rel="stylesheet" href="css/main.css" />
 		<link rel="stylesheet" href="css/booklook.css" />
 		<link rel="stylesheet" href="css/booksclass.css" />
@@ -29,7 +29,7 @@
 						<dl>
 							<dt><a href="index.html"><span>首页</span></a></dt>
 							<dt>
-							<a href="javascript:" class="active"><span>轻小说</span></a>
+							<a href="javascript:"><span>轻小说</span></a>
 							<!--<dl class="sub">
 								<dt><a href="#" title="站长小推荐"><span>站长小推荐</span></a></dt>
 							<dt><a href="#" title="动画化相关"><span>动画化相关</span></a></dt>
@@ -84,7 +84,7 @@
 			</div>
 			<div class="main bookmain">
 				<div class="type-select">
-					<span class="topname">轻小说</span>
+					<span class="topname">"***"的搜索结果</span>
 					<!--<span class="space"></span>
 					<a class="tag" href="javascript:">冒险</a>
 					<a class="tag" href="javascript:">搞笑</a>

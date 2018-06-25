@@ -1,29 +1,31 @@
-.workinfo table{
-	height: 100%;
-	width: 100%;
-	margin: 20px 0;
-	table-layout: fixed;
+.workinfo .book{
+	/*width: 150px;
+	height: 250px;*/
+	float: left;
+	margin: 0 30px 0 0;
 }
-.workinfo table td{
+.imgbox{
 	padding: 0;
-	width: 25%;
-	height: 230px;
+	width: 150px;
+	height: 200px;
 	vertical-align: top;
 }
-.workinfo table td img{
+.checkedit{
+	position: relative;
+}
+.workinfo img{
 	display: block;
 	margin: 0;
-	height: 80%;
+	height: 100%;
 	width: 100%;
 }
 .book_info{
-	width: 70%;
-	float: left;
+	/*width: 70%;*/
+	display: inline-block;
 }
 .bookinfo{
 	display: block;
 	margin: 0 5px;
-	width: 100%;
 	font-size: 13px;
 	overflow:hidden;
 	white-space:nowrap;
@@ -38,9 +40,11 @@
 	color: blue;
 }
 .book_edit{
-	width: 25%;
+	/*width: 25%;*/
+	position: absolute;
 	font-size: 13px;
-	float: right;
+	right: 0;
+	top: 0;
 }
 .bookedit{
 	display: block;

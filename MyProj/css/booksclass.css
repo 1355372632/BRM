@@ -1,0 +1,101 @@
+.bookmain{
+	margin-top: 80px;
+	width: 1500px;
+	height: 1000px;
+}
+.type-select{
+	width: 100%;
+	height: 100px;
+}
+.cutline{
+	border-bottom: darkgray solid 1px;
+}
+.topline{
+	margin: 3px 80px 0 40px;
+}
+.topname{
+	display: inline-block;
+	font-size: 26px;
+	margin: 15px 0 0 20px;
+	padding: 0 15px;
+	border-left: lawngreen solid 8px;
+}
+.space{
+	display: inline-block;
+	width: 50px;
+}
+.type-select .tag{
+	margin-left: 15px;
+	font-size: 18px;
+	text-decoration: none;
+	padding: 3px 15px;
+	color: black;
+	border-radius: 0.8rem;
+}
+.type-select .tag:hover{
+	color: white;
+	background: black;
+	border-bottom: red solid 3px;
+}
+.type-select .act{
+	color: white;
+	background: black;
+	border-bottom: red solid 3px;
+}
+.book-list dl{
+	margin: 20px 50px;
+}
+.book-list dl dt{
+	float: left;
+	margin: 15px;
+} 
+.img-box{
+	height: 150px;
+	width: 120px;
+	display: inline-block;
+}
+.img-box img{
+	height: 100%;
+	width: 100%;
+}
+.bookinfo{
+	display: inline-block;
+	vertical-align: top;
+	width: 300px;
+	height: 150px;
+	overflow: hidden; 
+}
+.title{
+	display: block;
+	font-size: 20px;
+	text-decoration: none;
+	color: black;
+	overflow: hidden;
+	text-overflow: ellipsis; 
+	white-space: nowrap;  
+}
+.title:hover{
+	color: red;
+}
+.info{
+	font-size: 12px;
+	text-decoration: none;
+	color: gray;
+	padding: 0 5px 0 0;
+	height: 5px;
+}
+.author,.type-1{
+	border-right: solid 1px;
+}
+.author:hover,.type-1:hover,.type-2:hover{
+	color: black;
+}
+.book-intro{
+	margin: 8px 0;
+	font-size: 14px;
+}
+.book-list dl .pagecontain{
+	/*position: absolute;*/
+	bottom: 20px;
+	margin-left: 48%;
+}
