@@ -9,7 +9,14 @@ import org.apache.ibatis.annotations.Select;
 import org.apache.ibatis.annotations.Update;
 
 import cn.edu.zjweu.entity.UserInfo;
-
+/**
+ * 
+* @ClassName: UserInfoDao
+* @Description:用户信息接口
+* @author: zerok
+* @date: 2018年6月26日 上午8:48:35
+*
+ */
 public interface UserInfoDao {
 	/**
 	 * 

@@ -12,6 +12,14 @@ import org.springframework.stereotype.Repository;
 
 import cn.edu.zjweu.dao.SectionDao;
 import cn.edu.zjweu.entity.Section;
+/**
+ * 
+* @ClassName: SectionDaoImpl
+* @Description:章节接口实现类
+* @author: zerok
+* @date: 2018年6月26日 上午8:50:16
+*
+ */
 @Repository("sectiondao")
 public class SectionDaoImpl extends SqlSessionDaoSupport implements SectionDao {
 	
