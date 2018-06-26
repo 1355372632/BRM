@@ -2,6 +2,12 @@ package cn.edu.zjweu.dao;
 
 import java.util.List;
 
+import org.apache.ibatis.annotations.Insert;
+import org.apache.ibatis.annotations.Param;
+import org.apache.ibatis.annotations.Select;
+import org.apache.ibatis.annotations.Update;
+import org.apache.ibatis.session.RowBounds;
+
 import cn.edu.zjweu.entity.Book;
 
 /**
@@ -14,27 +20,37 @@ import cn.edu.zjweu.entity.Book;
  */
 public interface BookDao {
 	
+	@Select("select * from Book order by hits desc")
 	public List<Book> getAllBooks();//获取所有书籍并根据点击量Hits 降序排列
 	
+	@Select("select * from Book where bTID=#{bTID}")
 	public List<Book> getBooksByBtid(int btid);//根据书籍类型查询
 	
-	public List<Book> getBooksByBtid(int btid,int begin,int end);//根据书籍类型查询并分页查询
+	@Select("select * from (select book.*,rownum rn from book where bTID=#{bTID} order by bookid) where  rn between #{begin} and #{end}")
+	public List<Book> getBooksLimitByBtid(@Param("bTID") int btid,@Param("begin") int begin,@Param("end") int end);//根据书籍类型查询并分页查询
 	
-	public boolean addBook(Book book);//编辑书籍	
+	@Insert("insert into Book values(#{bookID},#{bTID},#{bookName},#{bookAuthor},#{bookDesc},#{createDate},#{lastRead},#{endDate},#{bPicPath},#{hits},#{bookState})")
+	public boolean addBook(Book book);//添加书籍	
 	
+	@Select("delete from Book where bookID=#{bookID}")
 	public boolean delBook(String bookid);//删除书籍	
 	
-	public boolean editBook(Book book);//编辑书籍
+	@Update("update Book set bookDesc=#{bookDesc},endDate=#{endDate},bPicPath=#{bPicPath},bookState=#{bookState} where bookId=#{bookID}")
+	public boolean editBook(Book book);//编辑书籍,修改书籍简介，完结日期，封面路径，是否完结
 	
-	public List<Book> getBooksByFuzzyName(String bookName);//根据模糊书名查询
+	  @Select("select * from (select book.*,rownum rn from book where bookName like #{bookName} order by bookid) where  rn between #{begin} and #{end}")
+	public List<Book> getBooksByFuzzyName(@Param("bookName") String bookName,@Param("begin") int begin, @Param("end") int end);//根据模糊书名查询,fenye
+
 	
-	public List<Book> getBooksByAuthor(String authorName);//根据作者查询书籍
+	@Select("select * from Book where bookAuthor=#{bookAuthor} ")
+	public List<Book> getBooksByAuthor(String authorName,int a,int b);//根据作者查询书籍，并进行分页查询
 	
-	public List<Book> getBooksByAuthor(String authorName,int begin,int end);//根据作者查询书籍，并进行分页查询
+	@Select("select * from Book where bookID=#{bookID}")
+	public Book getBookByBookID(int bookid);	//根据书籍编号查询
 	
-	public Book getBookByBookID(String bookid);	//根据书籍编号查询
 	
-	public int getBookHits();//查询书籍点击量
+	@Select("select Book.hits from Book where bookID=#{bookID}")
+	public int getBookHits(int bookID);//查询书籍点击量
 	
 	
 }
