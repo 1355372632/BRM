@@ -23,55 +23,55 @@ public class BookServiceImpl implements BookService {
 
 	@Override
 	public List<Book> getBooksByBtid(int btid) {
-		// TODO Auto-generated method stub
+
 		return bookdao.getBooksByBtid(btid);
 	}
 
 	@Override
 	public List<Book> getBooksLimitByBtid(int btid, int begin, int end) {
-		// TODO Auto-generated method stub
+
 		return bookdao.getBooksLimitByBtid(btid, begin, end);
 	}
 
 	@Override
 	public boolean addBook(Book book) {
-		// TODO Auto-generated method stub
+
 		return bookdao.addBook(book);
 	}
 
 	@Override
 	public boolean delBook(int bookid) {
-		// TODO Auto-generated method stub
+	
 		return bookdao.delBook(bookid);
 	}
 
 	@Override
 	public boolean editBook(Book book) {
-		// TODO Auto-generated method stub
+
 		return bookdao.editBook(book);
 	}
 
 	@Override
 	public List<Book> getBooksByFuzzyName(String bookName, int begin, int end) {
-		// TODO Auto-generated method stub
+
 		return bookdao.getBooksByFuzzyName(bookName, begin, end);
 	}
 
 	@Override
 	public List<Book> getBooksByAuthor(String authorName, int a, int b) {
-		// TODO Auto-generated method stub
+
 		return bookdao.getBooksByAuthor(authorName, a, b);
 	}
 
 	@Override
 	public Book getBookByBookID(int bookid) {
-		// TODO Auto-generated method stub
+
 		return bookdao.getBookByBookID(bookid);
 	}
 
 	@Override
 	public int getBookHits(int bookID) {
-		// TODO Auto-generated method stub
+		
 		return bookdao.getBookHits(bookID);
 	}
 
