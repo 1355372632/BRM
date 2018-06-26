@@ -62,7 +62,7 @@ public class BookDaoImpl  extends  SqlSessionDaoSupport implements BookDao {
 	}
 
 	@Override
-	public boolean delBook(String bookid) {
+	public boolean delBook(int bookid) {
 		SqlSession sqlSession = this.getSqlSession();
 		System.out.println("sqlsession地址"+sqlSession);
 		boolean bool=(sqlSession.delete("delBook", bookid)==1)?true:false;

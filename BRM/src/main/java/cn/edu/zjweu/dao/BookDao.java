@@ -33,7 +33,7 @@ public interface BookDao {
 	public boolean addBook(Book book);//添加书籍	
 	
 	@Select("delete from Book where bookID=#{bookID}")
-	public boolean delBook(String bookid);//删除书籍	
+	public boolean delBook(int  bookid);//删除书籍	
 	
 	@Update("update Book set bookDesc=#{bookDesc},endDate=#{endDate},bPicPath=#{bPicPath},bookState=#{bookState} where bookId=#{bookID}")
 	public boolean editBook(Book book);//编辑书籍,修改书籍简介，完结日期，封面路径，是否完结
