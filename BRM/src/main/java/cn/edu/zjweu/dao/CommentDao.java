@@ -16,9 +16,9 @@ public interface CommentDao {
 	
 	public List<Comment> getAllComments();//获取所有评论
 	
-	public List<Comment> getCommentsByBookId(String bookid);//查询书籍类型下所有评论
+	public List<Comment> getCommentsByBookId(int bookid);//查询书籍类型下所有评论
 	
-	public List<Comment> getCommentsByInid(String inid);//查询评论下二次评论
+	public List<Comment> getCommentsByInid(int inid);//查询评论下二次评论
 	
 	public boolean addComment(Comment comment);//添加评论
 	

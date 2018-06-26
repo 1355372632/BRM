@@ -13,7 +13,7 @@ import cn.edu.zjweu.dao.BookTypeDao;
 import cn.edu.zjweu.entity.BookType;
 
 
-@Repository("booktypeDao")
+@Repository("booktypedao")
 public class BookTypeDaoImpl extends SqlSessionDaoSupport implements BookTypeDao {
 	
 	@Autowired
