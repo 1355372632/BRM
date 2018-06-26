@@ -9,7 +9,14 @@ import org.springframework.stereotype.Repository;
 
 import cn.edu.zjweu.dao.UserInfoDao;
 import cn.edu.zjweu.entity.UserInfo;
-
+/**
+ * 
+* @ClassName: UserInfoDaoImpl
+* @Description:用户信息接口实现类
+* @author: zerok
+* @date: 2018年6月26日 上午8:49:36
+*
+ */
 @Repository("userinfodao")
 public class UserInfoDaoImpl extends SqlSessionDaoSupport implements UserInfoDao {
 
