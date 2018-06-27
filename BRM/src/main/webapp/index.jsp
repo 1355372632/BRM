@@ -13,6 +13,6 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<jsp:forward page="user/index"></jsp:forward>
+	<jsp:forward page="main/index"></jsp:forward>
 </body>
 </html>

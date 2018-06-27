@@ -160,19 +160,12 @@
 						</div>
 						<div class="order">
 							<div class="title">
-								<span>每周点击排行</span>
+								<span>点击榜</span>
 							</div>
 							<dl>
-								<dt><a href="#"><span>666</span></a></dt>
-								<dt><a href="#"><span>666</span></a></dt>
-								<dt><a href="#"><span>666</span></a></dt>
-								<dt><a href="#"><span>666</span></a></dt>
-								<dt><a href="#"><span>666</span></a></dt>
-								<dt><a href="#"><span>666</span></a></dt>
-								<dt><a href="#"><span>666</span></a></dt>
-								<dt><a href="#"><span>666</span></a></dt>
-								<dt><a href="#"><span>666</span></a></dt>
-								<dt><a href="#"><span>666</span></a></dt>
+								<c:forEach var="bh" items="${bookhits}">
+								<dt><a href="main/book/${bh.bookID}"><span>${bh.bookName }</span></a></dt>
+								</c:forEach>
 							</dl>
 						</div>
 					</div>
@@ -224,19 +217,12 @@
 						</div>
 						<div class="order" id="online_order">
 							<div class="title">
-								<span>每周点击排行</span>
+								<span>新书榜</span>
 							</div>
 							<dl>
-								<dt><a href="#"><span>666</span></a></dt>
-								<dt><a href="#"><span>666</span></a></dt>
-								<dt><a href="#"><span>666</span></a></dt>
-								<dt><a href="#"><span>666</span></a></dt>
-								<dt><a href="#"><span>666</span></a></dt>
-								<dt><a href="#"><span>666</span></a></dt>
-								<dt><a href="#"><span>666</span></a></dt>
-								<dt><a href="#"><span>666</span></a></dt>
-								<dt><a href="#"><span>666</span></a></dt>
-								<dt><a href="#"><span>666</span></a></dt>
+								<c:forEach var="bh" items="${bookcreat}">
+								<dt><a href="main/book/${bh.bookID}"><span>${bh.bookName }</span></a></dt>
+								</c:forEach>
 							</dl>
 						</div>
 					</div>
@@ -288,19 +274,12 @@
 						</div>
 						<div class="order" id="online_order">
 							<div class="title">
-								<span>每周点击排行</span>
+								<span>完结榜</span>
 							</div>
 							<dl>
-								<dt><a href="#"><span>666</span></a></dt>
-								<dt><a href="#"><span>666</span></a></dt>
-								<dt><a href="#"><span>666</span></a></dt>
-								<dt><a href="#"><span>666</span></a></dt>
-								<dt><a href="#"><span>666</span></a></dt>
-								<dt><a href="#"><span>666</span></a></dt>
-								<dt><a href="#"><span>666</span></a></dt>
-								<dt><a href="#"><span>666</span></a></dt>
-								<dt><a href="#"><span>666</span></a></dt>
-								<dt><a href="#"><span>666</span></a></dt>
+								<c:forEach var="bh" items="${bookend}">
+								<dt><a href="main/book/${bh.bookID}"><span>${bh.bookName }</span></a></dt>
+								</c:forEach>   
 							</dl>
 						</div>
 					</div>

@@ -12,6 +12,7 @@ import org.springframework.stereotype.Repository;
 
 import cn.edu.zjweu.dao.BookDao;
 import cn.edu.zjweu.entity.Book;
+import cn.edu.zjweu.entity.Users;
 /**
  * 
 * @ClassName: BookDaoImpl
@@ -27,14 +28,9 @@ public class BookDaoImpl  extends  SqlSessionDaoSupport implements BookDao {
 	public void setSqlSessionFactory(SqlSessionFactory sqlSessionFactory) {
 		super.setSqlSessionFactory(sqlSessionFactory);
 	}
-	
-	@Override
-	public List<Book> getAllBooks() {
-		SqlSession sqlSession = this.getSqlSession();
-		System.out.println("sqlsession地址"+sqlSession);
-		List <Book> list=sqlSession.getMapper(BookDao.class).getAllBooks();
-		return list;
-	}
+	private int OFFSET=0;
+	private int LIMIT=8;
+
 
 	@Override
 	public List<Book> getBooksByBtid(int btid) {
@@ -121,9 +117,33 @@ public class BookDaoImpl  extends  SqlSessionDaoSupport implements BookDao {
 		return hits;
 	}
 
+	@Override
+	public List<Book> getBooksByHits() {
+		SqlSession sqlSession = this.getSqlSession();
+		RowBounds rowBounds =new RowBounds(OFFSET, LIMIT);	
+		List <Book> list=sqlSession.selectList("getBooksByHits", rowBounds);
+		return list;
+	}
+
+	@Override
+	public List<Book>getBooksByCreateDate() {
+		SqlSession sqlSession = this.getSqlSession();
+		RowBounds rowBounds =new RowBounds(OFFSET, LIMIT);	
+		List <Book> list=sqlSession.selectList("getBooksByCreateDate", rowBounds);
+		return list;
+	}
+
+	@Override
+	public List<Book> getBooksByEndDate() {
+		SqlSession sqlSession = this.getSqlSession();
+		RowBounds rowBounds =new RowBounds(OFFSET, LIMIT);	
+		List <Book> list=sqlSession.selectList("getBooksByEndDate", rowBounds);
+		return list;
+		
+	}
+
 	/**
 	 * 查询所有书籍
 	 */
-
 
 }

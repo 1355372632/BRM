@@ -17,7 +17,6 @@ public class Comment {
 	private int bookID;//书籍id外键
 	private int cReported;//被举报次数
 	private int hits;//点击量
-	
 	private List<Comment> comment;//存放子评论
 	
 	/**

@@ -63,12 +63,12 @@
 					</div>
 					<div class="book-info">
 						<h1>
-								<span>游戏人生</span>
-								<span class="bookauthor"><a href="#">榎宫祐</a>著</span>
+								<span>${book.bookName}</span>
+								<span class="bookauthor"><a href="#">${book.bookAuthor}</a>著</span>
 							</h1>
-						<span class="book-desc">游戏兄妹闯荡异世界</span>
+						<span class="book-desc">${book.bookDesc}</span>
 						<div class="bookbtn">
-							<input class="book-btn book-read" type="button" value="点击阅读" />
+							<input class="book-btn book-read" type="button" value="点击阅读" onclick="location.href='main/read/0'"/>
 							<input class="book-btn book-download" type="button" value="下载" />
 						</div>
 					</div>
@@ -82,30 +82,11 @@
 				<div class="derectory">
 					<h3>正文</h3>
 					<dl>
-						<dt data-rid="1">
-								<a href="read.html">第一章</a>
+						<c:forEach var="section" items="${book.sections}" varStatus="vs">
+						<dt data-rid="${vs.index}">
+								<a href="main/read/${vs.index}">第${vs.index+1}章  ${section.sectionTitle}</a>
 							</dt>
-						<dt data-rid="2">
-								<a href="javascript:">第二章</a>
-							</dt>
-						<dt data-rid="3">
-								<a href="javascript:">第三章</a>
-							</dt>
-						<dt data-rid="4">
-								<a href="javascript:">第四章</a>
-							</dt>
-						<dt data-rid="5">
-								<a href="javascript:">第五章</a>
-							</dt>
-						<dt data-rid="6">
-								<a href="javascript:">第六章</a>
-							</dt>
-						<dt data-rid="7">
-								<a href="javascript:">第七章</a>
-							</dt>
-						<dt data-rid="8">
-								<a href="javascript:">第八章</a>
-							</dt>
+						</c:forEach>
 					</dl>
 				</div>
 				<div class="review">
