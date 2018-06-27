@@ -12,7 +12,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <base href="<%=basePath%>">
-title>账号管理-安全管理</title>
+<title>账号管理-安全管理</title>
 		<link rel="stylesheet" href="css/ZR.css" />
 		<link rel="stylesheet" href="css/reg.css" />
 		<link rel="stylesheet" href="css/pCenter.css" />
@@ -135,7 +135,7 @@ title>账号管理-安全管理</title>
 						<div class="onebox">
 							<div class="admintitle edit_sec">
 								<a href="personalCenterLink/passwd" class="active">修改密码</a>
-								<a href="personalCenterLink/admin_indexemail">密保邮箱</a>
+								<a href="personalCenterLink/email">密保邮箱</a>
 							</div>
 							<div class="databox">
 								<form class="admin_form" method="post" >

@@ -143,7 +143,7 @@
 					<div class="onebox">
 						<div class="admintitle edit_sec">
 							<a href="personalCenterLink/admin_infoEdit" class="active">基本信息</a> 
-							<a href="iconUpload.html">上传头像</a>
+							<a href="personalCenterLink/iconUpload">上传头像</a>
 						</div>
 						<div class="databox">
 							<form class="admin_form" method="post" action="userInfoController/editInfo">
