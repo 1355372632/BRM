@@ -18,11 +18,28 @@ $('#mpanel').slideVerify({
     ready : function() {
     },
     success : function() {
-//    alert('验证成功，添加你自己的代码！');
-	$("#form1").submit();
-//		function submit(){
-//		window.location="index.html";
-//		}
+
+/*      window.location="user/index";*/
+    	
+    	$.ajax({
+			
+			url: "http://localhost:8080/BRM/user/dologin",
+			//请求的url地址
+			data: {userID:$("#userID").val(),uPwd:$("#uPwd").val()},
+			type: "post",
+			//请求方式
+			dataType:"json",
+			success: function (data) { 
+				if(data.msg==true){
+					alert("登录成功！");
+					window.location="user/index";
+				}else if(data.msg==false){
+					alert("用户名或密码错误，请重新输入！")
+					window.location = 'user/login';
+				}
+			}
+		});
+
     },
     error : function() {
       alert('验证失败！请重试！');

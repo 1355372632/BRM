@@ -63,9 +63,9 @@ public class UserServiceImplTest {
 
 	@Test
 	public void testGetUserById() {
-		Users u = userservice.getUserById("zerok");
+		Users u = userservice.getUserById("1s11");
 		System.out.println(u.toString());
-		assertNotNull(u);
+		assertNull(u);
 	}
 
 	@Test

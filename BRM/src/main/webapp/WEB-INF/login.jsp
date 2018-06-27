@@ -12,6 +12,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <base href="<%=basePath%>">
+
 <title>登录</title>
 		<link rel="stylesheet" href="css/ZR.css" />
 		<link rel="stylesheet" href="css/reg.css" />
@@ -105,12 +106,12 @@
 						</p>
 					</div>
 					<div class="input_text" id="login_text">
-						<form action="index.html" method="post" id="form1">
+						<form id="form1">
 							<span class="text_title">用户名</span>
-							<input class="form_text" type="text" size="30" name="uid" />
+							<input class="form_text" type="text" size="30" name="userID" id="userID" />
 							<br />
 							<span class="text_title">密码</span>
-							<input class="form_text" type="text" size="30" name="upwd" />
+							<input class="form_text" type="text" size="30" name="uPwd" id="uPwd" />
 							<br />
 							<div class="button">
 								<input type="button" class="submit" id="login_submit" value="登录" />

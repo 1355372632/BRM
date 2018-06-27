@@ -19,6 +19,23 @@
 		<script type="text/javascript" src="js/jquery-1.11.0.min.js" ></script>
 		<script type="text/javascript" src="js/verify.js" ></script>
 		<script type="text/javascript" src="js/clickEvent.js" ></script>
+		<script type="text/javascript" src="js/reg_check.js" ></script>
+		<script type="text/javascript">
+			$(function(){
+				$("#reg_submit").click(function(){
+					if($("#span1").html()==$("#span2").html()&&$("#span2").html()== $("#span3").html()&&$("#span3").html()== $("#span5").html()){
+						$("#mpanel").css("visibility","visible");
+						setTimeout(mpanelHide,10000);	
+					}else
+						alert("请重新确认注册信息！")
+				});
+				
+				function mpanelHide(){
+					$("#mpanel").css("visibility","hidden");
+				}
+
+			})
+		</script>
 	</head>
 
 	<body>
@@ -104,21 +121,21 @@
 						</p>
 					</div>
 					<div class="input_text" id="reg_text">
-						<form action="index.html" method="post" id="form1">
+						<form  method="post" id="form1">
 							<span class="text_title">用户名</span>
-							<input class="form_text" type="text" size="30" name="uid" /><span class="sign">√</span>
+							<input class="form_text" type="text" size="30" id="uid" /><span class="sign" id="span1" style="padding:0px 8px;border-radius:50%;color:white"></span>
 							<br />
 							<span class="text_title">密码</span>
-							<input class="form_text" type="text" size="30" name="upwd" /><span class="sign">√</span>
+							<input class="form_text" type="text" size="30" id="upwd" /><span class="sign" id="span2" style="padding:0px 8px;border-radius:50%;color:white"></span>
 							<br />
 							<span class="text_title">确认密码</span>
-							<input class="form_text" type="text" size="30" name="upwd_check" /><span class="sign">√</span>
+							<input class="form_text" type="text" size="30" id="upwd_check" /><span class="sign" id="span3" style="padding:0px 8px;border-radius:50%;color:white"></span>
 							<br />
-							<span class="text_title">昵称</span>
-							<input class="form_text" type="text" size="30" name="uname" /><span class="sign">√</span>
-							<br />
+							<!-- <span class="text_title">昵称</span>
+							<input class="form_text" type="text" size="30" id="uname" /><span class="sign" id="span4" style="padding:0px 8px;border-radius:50%;color:white"></span>
+							<br /> -->
 							<span class="text_title">邮箱</span>
-							<input class="form_text" type="text" size="30" name="uemail" /><span class="sign">√</span>
+							<input class="form_text" type="text" size="30" id="uemail" /><span class="sign" id="span5" style="padding:0px 8px;border-radius:50%;color:white"></span>
 							<br />
 							<input type="button" class="submit" id="reg_submit" value="注册" />
 						</form>
