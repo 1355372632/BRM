@@ -69,18 +69,20 @@
 				</dl>
 			</div>
 				<div class="search">
-					<table>
-						<tr>
-							<td id="search_text">
-								<input type="text" value=" 有什么想找的，试试看吧" id="searchText" height="30px" size="15" />
-							</td>
-							<td id="search_img">
-								<a href="#">
-									<img src="../img/main/搜索框按钮图标.png" />
-								</a>
-							</td>
-						</tr>
-					</table>
+					<form id="do-search" method="post" action="searchResult.jsp">
+						<table>
+							<tr>
+								<td id="search_text">
+									<input type="text" placeholder="有什么想找的，试试看吧" id="searchText" height="30px" size="15" />
+								</td>
+								<td id="search_img">
+									<a href="javascript:document.getElementById('do-search').submit()">
+										<img src="img/main/搜索框按钮图标.png" />
+									</a>
+								</td>
+							</tr>
+						</table>
+					</form>
 				</div>
 				<div class="reg_title">
 					<div class="reg_title_bg"></div>
@@ -95,7 +97,7 @@
 				<div class="personalCenter_main_left">
 					<div class="adminbox">
 						<div class="adminpic">
-							<img src="../img/login/bg.jpg" />
+							<img src="img/login/bg.jpg" />
 						</div>
 						<div class="adminname fontpart">丸户史明</div>
 						<div class="adminlink">
@@ -131,8 +133,7 @@
 						<div class="admintop">
 							<div class="admintopname">
 								丸户史明
-								<a href="javascript:void(0)">轻小说作家</a>
-								<a href="javascript:void(0)">剧本创作者</a>
+								
 							</div>
 							<div class="admintopmsg">
 								2018/5/23,打代码，头疼
@@ -146,7 +147,7 @@
 							<dl>
 								<dt class="book">
 									<div class="imgbox">
-										<img src="../img/main/cover/路人女主4.jpg" />
+										<img src="img/main/cover/路人女主4.jpg" />
 									</div>
 									<div class="checkedit">
 										<div class="book_info">
@@ -161,7 +162,7 @@
 								</dt>
 								<dt class="book">
 									<div class="imgbox">
-										<img src="../img/main/cover/路人女主4.jpg" />
+										<img src="img/main/cover/路人女主4.jpg" />
 									</div>
 									<div class="checkedit">
 										<div class="book_info">
@@ -176,7 +177,7 @@
 								</dt>
 								<dt class="book">
 									<div class="imgbox">
-										<img src="../img/main/cover/路人女主4.jpg" />
+										<img src="img/main/cover/路人女主4.jpg" />
 									</div>
 									<div class="checkedit">
 										<div class="book_info">
@@ -191,7 +192,7 @@
 								</dt>
 								<dt class="book">
 									<div class="imgbox">
-										<img src="../img/main/cover/路人女主4.jpg" />
+										<img src="img/main/cover/路人女主4.jpg" />
 									</div>
 									<div class="checkedit">
 										<div class="book_info">
@@ -206,7 +207,7 @@
 								</dt>
 								<dt class="book">
 									<div class="imgbox">
-										<img src="../img/main/cover/路人女主4.jpg" />
+										<img src="img/main/cover/路人女主4.jpg" />
 									</div>
 									<div class="checkedit">
 										<div class="book_info">
@@ -221,7 +222,7 @@
 								</dt>
 								<dt class="book">
 									<div class="imgbox">
-										<img src="../img/main/cover/路人女主4.jpg" />
+										<img src="img/main/cover/路人女主4.jpg" />
 									</div>
 									<div class="checkedit">
 										<div class="book_info">

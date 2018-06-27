@@ -71,18 +71,20 @@
 				</dl>
 			</div>
 				<div class="search">
-					<table>
-						<tr>
-							<td id="search_text">
-								<input type="text" value=" 有什么想找的，试试看吧" id="searchText" height="30px" size="15" />
-							</td>
-							<td id="search_img">
-								<a href="#">
-									<img src="../img/main/搜索框按钮图标.png" />
-								</a>
-							</td>
-						</tr>
-					</table>
+					<form id="do-search" method="post" action="searchResult.jsp">
+						<table>
+							<tr>
+								<td id="search_text">
+									<input type="text" placeholder="有什么想找的，试试看吧" id="searchText" height="30px" size="15" />
+								</td>
+								<td id="search_img">
+									<a href="javascript:document.getElementById('do-search').submit()">
+										<img src="img/main/搜索框按钮图标.png" />
+									</a>
+								</td>
+							</tr>
+						</table>
+					</form>
 				</div>
 				<div class="reg_title">
 					<div class="reg_title_bg"></div>
@@ -97,7 +99,7 @@
 				<div class="personalCenter_main_left">
 					<div class="adminbox">
 						<div class="adminpic">
-							<img src="../img/login/bg.jpg" />
+							<img src="img/login/bg.jpg" />
 						</div>
 						<div class="adminname fontpart">${user.userinfo.uName}</div>
 						<div class="adminlink">
@@ -149,7 +151,7 @@
 							<table>
 								<tr>
 									<td>
-										<img src="../img/main/cover/路人女主4.jpg" />
+										<img src="img/main/cover/路人女主4.jpg" />
 										<div class="book_info">
 											<a href="javascript:" class="bookinfo book_title" title="路人女主的养成方法">路人女主的养成方法</a>
 											<a href="javascript:" class="bookinfo book_author">丸户史明</a>
@@ -160,7 +162,7 @@
 										</div>
 									</td>
 									<td>
-										<img src="../img/main/cover/路人女主4.jpg" />
+										<img src="img/main/cover/路人女主4.jpg" />
 										<div class="book_info">
 											<a href="javascript:" class="bookinfo book_title" title="路人女主的养成方法">路人女主的养成方法</a>
 											<a href="javascript:" class="bookinfo book_author">丸户史明</a>
@@ -171,7 +173,7 @@
 										</div>
 									</td>
 									<td>
-										<img src="../img/main/cover/路人女主4.jpg" />
+										<img src="img/main/cover/路人女主4.jpg" />
 										<div class="book_info">
 											<a href="javascript:" class="bookinfo book_title" title="路人女主的养成方法">路人女主的养成方法</a>
 											<a href="javascript:" class="bookinfo book_author">丸户史明</a>
@@ -182,7 +184,7 @@
 										</div>
 									</td>
 									<td>
-										<img src="../img/main/cover/路人女主4.jpg" />
+										<img src="img/main/cover/路人女主4.jpg" />
 										<div class="book_info">
 											<a href="javascript:" class="bookinfo book_title" title="路人女主的养成方法">路人女主的养成方法</a>
 											<a href="javascript:" class="bookinfo book_author">丸户史明</a>
@@ -195,7 +197,7 @@
 								</tr>
 								<tr>
 									<td>
-										<img src="../img/main/cover/路人女主4.jpg" />
+										<img src="img/main/cover/路人女主4.jpg" />
 										<div class="book_info">
 											<a href="javascript:" class="bookinfo book_title" title="路人女主的养成方法">路人女主的养成方法</a>
 											<a href="javascript:" class="bookinfo book_author">丸户史明</a>
@@ -206,7 +208,7 @@
 										</div>
 									</td>
 									<td>
-										<img src="../img/main/cover/路人女主4.jpg" />
+										<img src="img/main/cover/路人女主4.jpg" />
 										<div class="book_info">
 											<a href="javascript:" class="bookinfo book_title" title="路人女主的养成方法">路人女主的养成方法</a>
 											<a href="javascript:" class="bookinfo book_author">丸户史明</a>
@@ -217,7 +219,7 @@
 										</div>
 									</td>
 									<td>
-										<img src="../img/main/cover/路人女主4.jpg" />
+										<img src="img/main/cover/路人女主4.jpg" />
 										<div class="book_info">
 											<a href="javascript:" class="bookinfo book_title" title="路人女主的养成方法">路人女主的养成方法</a>
 											<a href="javascript:" class="bookinfo book_author">丸户史明</a>
@@ -228,7 +230,7 @@
 										</div>
 									</td>
 									<td>
-										<img src="../img/main/cover/路人女主4.jpg" />
+										<img src="img/main/cover/路人女主4.jpg" />
 										<div class="book_info">
 											<a href="javascript:" class="bookinfo book_title" title="路人女主的养成方法">路人女主的养成方法</a>
 											<a href="javascript:" class="bookinfo book_author">丸户史明</a>

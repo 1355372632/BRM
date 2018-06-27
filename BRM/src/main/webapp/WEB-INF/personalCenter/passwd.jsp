@@ -68,18 +68,20 @@ title>账号管理-安全管理</title>
 				</dl>
 			</div>
 				<div class="search">
-					<table>
-						<tr>
-							<td id="search_text">
-								<input type="text" value=" 有什么想找的，试试看吧" id="searchText" height="30px" size="15" />
-							</td>
-							<td id="search_img">
-								<a href="#">
-									<img src="../img/main/搜索框按钮图标.png" />
-								</a>
-							</td>
-						</tr>
-					</table>
+					<form id="do-search" method="post" action="searchResult.jsp">
+						<table>
+							<tr>
+								<td id="search_text">
+									<input type="text" placeholder="有什么想找的，试试看吧" id="searchText" height="30px" size="15" />
+								</td>
+								<td id="search_img">
+									<a href="javascript:document.getElementById('do-search').submit()">
+										<img src="img/main/搜索框按钮图标.png" />
+									</a>
+								</td>
+							</tr>
+						</table>
+					</form>
 				</div>
 				<div class="reg_title">
 					<div class="reg_title_bg"></div>
@@ -94,7 +96,7 @@ title>账号管理-安全管理</title>
 				<div class="personalCenter_main_left">
 					<div class="adminbox">
 						<div class="adminpic">
-							<img src="../img/login/bg.jpg" />
+							<img src="img/login/bg.jpg" />
 						</div>
 						<div class="adminname fontpart">丸户史明</div>
 						<div class="adminlink">
