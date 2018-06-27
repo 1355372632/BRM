@@ -72,15 +72,18 @@ public class UserController {
 	 */
 	@RequestMapping("/dologin")
 	@ResponseBody //必须加入的注解
-	public JSONObject  dologin(String userID,String uPwd,HttpServletRequest request) {
+	public JSONObject  dologin(String userID,String uPwd,HttpServletRequest request,Model model) {
 		JSONObject json = new JSONObject();
 		Users u = new Users();
 		u.setUserID(userID);
 		u.setuPwd(uPwd);
 	    System.out.println(u.toString());
 		Users user = userdao.login(u);
-		if(user!=null)
-			json.put("msg", true); 
+		if(user!=null){
+			json.put("msg", true);
+			model.addAttribute("user",user);
+		
+		} 
 		else	
 			json.put("msg", false); 
 
