@@ -15,11 +15,7 @@ public class BookServiceImpl implements BookService {
 	@Resource
 	private BookDao bookdao;
 
-	@Override
-	public List<Book> getAllBooks() {
-		List<Book>list=bookdao.getAllBooks();
-		return list;
-	}
+
 
 	@Override
 	public List<Book> getBooksByBtid(int btid) {
@@ -73,6 +69,24 @@ public class BookServiceImpl implements BookService {
 	public int getBookHits(int bookID) {
 		
 		return bookdao.getBookHits(bookID);
+	}
+
+	@Override
+	public List<Book> getBooksByHits() {
+		// TODO Auto-generated method stub
+		return bookdao.getBooksByHits();
+	}
+
+	@Override
+	public List<Book> getBooksByCreateDate() {
+		// TODO Auto-generated method stub
+		return bookdao.getBooksByCreateDate();
+	}
+
+	@Override
+	public List<Book> getBooksByEndDate() {
+		// TODO Auto-generated method stub
+		return bookdao.getBooksByEndDate();
 	}
 
 }

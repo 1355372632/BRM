@@ -1,11 +1,16 @@
 package cn.edu.zjweu.service;
 
 import java.util.List;
+
 import cn.edu.zjweu.entity.Book;
 
 public interface BookService {
 
-	public List<Book> getAllBooks();//获取所有书籍并根据点击量Hits 降序排列
+	public List<Book> getBooksByHits();//获取所有书籍并根据点击量Hits 降序排列
+	
+	public List<Book> getBooksByCreateDate();//获取所有书籍并根据最近发布时间createDate 升序排列
+	
+	public List<Book> getBooksByEndDate();//获取所有书籍并根据完结时间ENDDATE 升序排列
 	
 	
 	public List<Book> getBooksByBtid(int btid);//根据书籍类型查询

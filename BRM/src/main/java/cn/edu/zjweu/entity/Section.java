@@ -9,7 +9,7 @@ import java.sql.Date;
  */
 public class Section {
 	private int sectionID;//章节编号 主键 自增 sectionSequence
-	private String sectionNtitle;//章节名
+	private String sectionTitle;//章节名
 	private String content;//章节主要内容
 	private Date sectionUpdate;//更新时间
 	private int bookID;//外键 书籍编号
@@ -19,11 +19,17 @@ public class Section {
 	public void setSectionID(int sectionID) {
 		this.sectionID = sectionID;
 	}
-	public String getSectionNtitle() {
-		return sectionNtitle;
+	public String sectionTitle() {
+		return sectionTitle();
 	}
-	public void setSectionNtitle(String sectionNtitle) {
-		this.sectionNtitle = sectionNtitle;
+	public void sectionTitle(String sectionTitle) {
+		this.sectionTitle = sectionTitle;
+	}
+	public String getSectionTitle() {
+		return sectionTitle;
+	}
+	public void setSectionTitle(String sectionTitle) {
+		this.sectionTitle = sectionTitle;
 	}
 	public String getContent() {
 		return content;
@@ -43,10 +49,10 @@ public class Section {
 	public void setBookID(int bookID) {
 		this.bookID = bookID;
 	}
-	public Section(int sectionID, String sectionNtitle, String content, Date sectionUpdate, int bookID) {
+	public Section(int sectionID, String sectionTitle, String content, Date sectionUpdate, int bookID) {
 		super();
 		this.sectionID = sectionID;
-		this.sectionNtitle = sectionNtitle;
+		this.sectionTitle = sectionTitle;
 		this.content = content;
 		this.sectionUpdate = sectionUpdate;
 		this.bookID = bookID;

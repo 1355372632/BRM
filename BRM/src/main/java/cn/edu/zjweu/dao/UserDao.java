@@ -63,7 +63,7 @@ public interface UserDao {
 	* @return: boolean
 	* @throws
 	 */
-	@Update("update users set upwd=#{uPwd},uemail=#{uEmail},utype=#{uType}, where userid=#{userID}")
+	@Update("update users set upwd=#{uPwd},uemail=#{uEmail},utype=#{uType} where userid=#{userID}")
 	public boolean editUser(Users users);
 	/**
 	 * 

@@ -21,7 +21,13 @@ import cn.edu.zjweu.entity.Book;
 public interface BookDao {
 	
 	@Select("select * from Book order by hits desc")
-	public List<Book> getAllBooks();//获取所有书籍并根据点击量Hits 降序排列
+	public List<Book> getBooksByHits();//获取所有书籍并根据点击量Hits 降序排列
+	
+	@Select("select * from Book order by createDate asc")
+	public List<Book> getBooksByCreateDate();//获取所有书籍并根据最近发布时间createDate 升序排列
+	
+	@Select("select * from Book where enddate is not null order by endDate asc")
+	public List<Book> getBooksByEndDate();//获取所有书籍并根据完结时间ENDDATE 升序排列
 	
 	@Select("select * from Book where bTID=#{bTID}")
 	public List<Book> getBooksByBtid(int btid);//根据书籍类型查询
