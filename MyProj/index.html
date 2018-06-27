@@ -25,15 +25,15 @@
 					<dl class="menu">
 						<dt><a href="index.html"><span>首页</span></a></dt>
 						<dt>
-							<a href="#"><span>轻小说</span></a>
+							<a href="light.html"><span>轻小说</span></a>
 						</dt>
 						<dt>
-							<a href="#"><span>网络小说</span></a>
+							<a href="web.html"><span>网络小说</span></a>
 					</dt>
 						<dt>
-							<a href="#"><span>文学作品</span></a>
+							<a href="literature.html"><span>文学作品</span></a>
 					</dt>
-					<dt><a href="#"><span>联系我们</span></a></dt>
+					<dt><a href="lianxi.jsp"><span>联系我们</span></a></dt>
 					<dt>
 							<a href="personalCenter/admin_index.html"><span>个人中心</span></a>
 							<dl class="sub">
@@ -44,18 +44,20 @@
 					</dl>
 				</div>
 				<div class="search">
-					<table>
-						<tr>
-							<td id="search_text">
-								<input type="text" placeholder="有什么想找的，试试看吧" id="searchText" height="30px" size="15" />
-							</td>
-							<td id="search_img">
-								<a href="#">
-									<img src="img/main/搜索框按钮图标.png" />
-								</a>
-							</td>
-						</tr>
-					</table>
+					<form id="do-search" method="post" action="">
+						<table>
+							<tr>
+								<td id="search_text">
+									<input type="text" placeholder="有什么想找的，试试看吧" id="searchText" height="30px" size="15" />
+								</td>
+								<td id="search_img">
+									<a href="javascript:document.getElementById('do-search').submit()">
+										<img src="img/main/搜索框按钮图标.png" />
+									</a>
+								</td>
+							</tr>
+						</table>
+					</form>
 				</div>
 			</div>
 
