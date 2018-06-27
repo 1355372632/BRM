@@ -2,18 +2,22 @@
 <html>
 	<head>
 		<meta charset="UTF-8">
-		<title>账号管理-信息设置-上传头像</title>
+		<title>管理员-推荐榜单</title>
 		<link rel="stylesheet" href="../css/ZR.css" />
 		<link rel="stylesheet" href="../css/reg.css" />
 		<link rel="stylesheet" href="../css/pCenter.css" />
 		<link rel="stylesheet" href="../css/pindex.css" />
-		<link rel="stylesheet" href="../css/mood.css" />
-		<link rel="stylesheet" href="../css/iconupload.css" type="text/css" />
-		<link rel="stylesheet" href="../css/admin_edit.css" />
+		<link rel="stylesheet" href="../css/workedit.css" />
 		<script type="text/javascript" src="../js/jquery-1.11.0.min.js" ></script>
-		<script type="text/javascript" src="../js/cropbox.js"></script>
-		<script type="text/javascript" src="../js/iconwin.js" ></script>
-		<script type="text/javascript" src="../js/clickEvent.js" ></script>
+		<style type="text/css">
+			.sugbook{
+				margin: 15px 0;
+			}
+			.sugbook a{
+				display: inline-block;
+				float: right;
+			}
+		</style>
 	</head>
 	<body>
 		<div class="box" id="personalCenter_box">
@@ -91,50 +95,88 @@
 							<a href="admin_mood.html" class="opennav">心情</a>
 						</dt>
 						<dt>
-							<a href="javascript:void(0)" class="opennav active">账号管理</a>
+							<a href="javascript:void(0)" class="opennav">账号管理</a>
 							<div class="navsonbox">
-								<a href="admin_infoEdit.html" style="color: hotpink;">信息设置</a>
+								<a href="admin_infoEdit.html">信息设置</a>
 								<a href="passwd.html">安全管理</a>
 							</div>
 						</dt>
 						<dt>
-							<a href="workedit.html" class="opennav">投稿管理</a>
+							<a href="workedit.html" class="opennav active">投稿管理</a>
 						</dt>
 					</dl>
 				</div>
-				<div class="personalCenter_main_right edit_main">
-					<div class="mainbox mood_main">
-						<div class="admintitle spacetitle">
-							<span>信息设置</span>
+				<div class="personalCenter_main_right">
+					<div class="mainbox">
+						<div class="admintitle infotitle">
+							<span>榜单管理</span>
+							<a href="../upload/newbook.html">上传新作品</a>
+							<a href="adminuser.html">板块管理</a>
+							<a href="suggest.html">推荐榜单</a>
 						</div>
-						<div class="onebox">
-							<div class="admintitle edit_sec">
-								<a href="admin_infoEdit.html">基本信息</a>
-								<a href="iconUpload.html" class="active">上传头像</a>
-							</div>
-							<div class="iconmake">
-								<div class="container">
-								  <div class="imageBox">
-									<div class="thumbBox"></div>
-									<div class="spinner" style="display: none">Loading...</div>
-								  </div>
-								  <div class="action"> 
-									<div class="new-contentarea tc"> 
-										<a href="javascript:void(0)" class="upload-img">
-											<span>上传图像</span>
-									 	</a>
-									  <input type="file" class="" name="upload-file" id="upload-file" />
+						<div class="admininfo workinfo">
+							<dl>
+								<dt class="suggest" data-id = "1">
+									<div class="sugbook">
+										<span>摸狗神功</span>
+										<a href="javascript:">删除</a>
 									</div>
-									<input type="button" id="btnCrop"  class="Btnsty_peyton" value="裁切">
-									<input type="button" id="btnZoomIn" class="Btnsty_peyton" value="+"  >
-									<input type="button" id="btnZoomOut" class="Btnsty_peyton" value="-" >
-								  </div>
-								  <form class="iconform" method="post">
-								  	<div class="cropped"></div>
-								  </form>
-								  <input type="button" class="iconsubmit" value="提交" />
-								</div>
-							</div> 
+								</dt>
+								<dt class="suggest" data-id = "2">
+									<div class="sugbook">
+										<span>摸狗神功</span>
+										<a href="javascript:">删除</a>
+									</div>
+								</dt>
+								<dt class="suggest" data-id = "3">
+									<div class="sugbook">
+										<span>摸狗神功</span>
+										<a href="javascript:">删除</a>
+									</div>
+								</dt>
+								<dt class="suggest" data-id = "4">
+									<div class="sugbook">
+										<span>摸狗神功</span>
+										<a href="javascript:">删除</a>
+									</div>
+								</dt>
+								<dt class="suggest" data-id = "5">
+									<div class="sugbook">
+										<span>摸狗神功</span>
+										<a href="javascript:">删除</a>
+									</div>
+								</dt>
+								<dt class="suggest" data-id = "6">
+									<div class="sugbook">
+										<span>摸狗神功</span>
+										<a href="javascript:">删除</a>
+									</div>
+								</dt>
+								<dt class="suggest" data-id = "7">
+									<div class="sugbook">
+										<span>摸狗神功</span>
+										<a href="javascript:">删除</a>
+									</div>
+								</dt>
+								<dt class="suggest" data-id = "8">
+									<div class="sugbook">
+										<span>摸狗神功</span>
+										<a href="javascript:">删除</a>
+									</div>
+								</dt>
+								<dt class="suggest" data-id = "9">
+									<div class="sugbook">
+										<span>摸狗神功</span>
+										<a href="javascript:">删除</a>
+									</div>
+								</dt>
+								<dt class="suggest" data-id = "10">
+									<div class="sugbook">
+										<span>摸狗神功</span>
+										<a href="javascript:">删除</a>
+									</div>
+								</dt>
+							</dl>
 						</div>
 					</div>
 				</div>
