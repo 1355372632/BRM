@@ -13,13 +13,13 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <base href="<%=basePath%>">
 <title>个人中心-我的空间</title>
-<link rel="stylesheet" href="../css/ZR.css" />
-<link rel="stylesheet" href="../css/reg.css" />
-<link rel="stylesheet" href="../css/pCenter.css" />
-<link rel="stylesheet" href="../css/pindex.css" />
-<link rel="stylesheet" href="../css/mood.css" />
-<script type="text/javascript" src="../js/jquery-1.11.0.min.js"></script>
-<script type="text/javascript" src="../js/clickEvent.js"></script>
+<link rel="stylesheet" href="css/ZR.css" />
+<link rel="stylesheet" href="css/reg.css" />
+<link rel="stylesheet" href="css/pCenter.css" />
+<link rel="stylesheet" href="css/pindex.css" />
+<link rel="stylesheet" href="/css/mood.css" />
+<script type="text/javascript" src="js/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="js/clickEvent.js"></script>
 </head>
 <body>
 	<div class="box" id="personalCenter_box">
@@ -29,31 +29,18 @@
 			<div class="top_menu">
 				<dl class="menu">
 					<dt>
-						<a href="../index.html"><span>首页</span></a>
+						<a href="link/index"><span>首页</span></a>
 					</dt>
 					<dt>
-						<a href="#"><span>轻小说</span></a>
-						<!--<dl class="sub">
-								<dt><a href="#"><span>站长小推荐</span></a></dt>
-						<dt><a href="#"><span>动画化相关</span></a></dt>
-						<dt><a href="#"><span>经典回忆录</span></a></dt>
-					</dl>-->
+						<a href="link/light"><span>轻小说</span></a>
+
 					</dt>
 					<dt>
-						<a href="#"><span>网络小说</span></a>
-						<!--<dl class="sub">
-								<dt><a href="#"><span>站长小推荐</span></a></dt>
-					<dt><a href="#"><span>连载进行时</span></a></dt>
-					<dt><a href="#"><span>完结回忆录</span></a></dt>
-					</dl>-->
+						<a href="link/web"><span>网络小说</span></a>
 					</dt>
 					<dt>
-						<a href="#"><span>文学作品</span></a>
-						<!--<dl class="sub">
-								<dt><a href="#"><span>文艺故事会</span></a></dt>
-					<dt><a href="#"><span>哲学讨论组</span></a></dt>
-					<dt><a href="#"><span>人物传奇史</span></a></dt>
-					</dl>-->
+						<a href="link/literature"><span>文学作品</span></a>
+						
 					</dt>
 					<!--<dt>
 							<a href="#"><span>综合讨论</span></a>
@@ -72,10 +59,10 @@
 						<a href="#"><span>个人中心</span></a>
 						<dl class="sub">
 							<dt>
-								<a href="#"><span>登录</span></a>
+								<a href="link/login"><span>登录</span></a>
 							</dt>
 							<dt>
-								<a href="#"><span>注册</span></a>
+								<a href="link/reg"><span>注册</span></a>
 							</dt>
 						</dl>
 					</dt>
