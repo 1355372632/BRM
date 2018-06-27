@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 	<head>
 		<meta charset="UTF-8">
 		<title>管理员-书籍管理</title>
@@ -9,11 +10,11 @@
 		<link rel="stylesheet" href="../css/pindex.css" />
 		<link rel="stylesheet" href="../css/workedit.css" />
 		<link rel="stylesheet" href="../css/admin_edit.css" />
-		<script type="text/javascript" src="../js/jquery-1.11.0.min.js" ></script>
+		<script type="text/javascript" src="../js/jquery-1.11.0.min.js"></script>
 		<script type="text/javascript">
-			
 		</script>
 	</head>
+
 	<body>
 		<div class="box" id="personalCenter_box">
 			<div class="bg" id="reg_bg"></div>
@@ -23,72 +24,40 @@
 					<dl class="menu">
 						<dt><a href="../index.html"><span>首页</span></a></dt>
 						<dt>
-							<a href="#"><span>轻小说</span></a>
-							<!--<dl class="sub">
-								<dt><a href="#"><span>站长小推荐</span></a></dt>
-						<dt><a href="#"><span>动画化相关</span></a></dt>
-						<dt><a href="#"><span>经典回忆录</span></a></dt>
-					</dl>-->
-					</dt>
-					<dt>
-							<a href="#"><span>网络小说</span></a>
-							<!--<dl class="sub">
-								<dt><a href="#"><span>站长小推荐</span></a></dt>
-					<dt><a href="#"><span>连载进行时</span></a></dt>
-					<dt><a href="#"><span>完结回忆录</span></a></dt>
-					</dl>-->
-					</dt>
-					<dt>
-							<a href="#"><span>文学作品</span></a>
-							<!--<dl class="sub">
-								<dt><a href="#"><span>文艺故事会</span></a></dt>
-					<dt><a href="#"><span>哲学讨论组</span></a></dt>
-					<dt><a href="#"><span>人物传奇史</span></a></dt>
-					</dl>-->
-					</dt>
-					<!--<dt>
-							<a href="#"><span>综合讨论</span></a>
+							<a href="../light.html"><span>轻小说</span></a>
+						</dt>
+						<dt>
+							<a href="../web.html"><span>网络小说</span></a>
+						</dt>
+						<dt>
+							<a href="../literature.html"><span>文学作品</span></a>
+						</dt>
+						<dt><a href="../lianxi.jsp"><span>联系我们</span></a></dt>
+						<dt>
+							<a href="admin_index.html"><span>个人中心</span></a>
 							<dl class="sub">
-								<dt><a href="#"><span>相关资讯</span></a></dt>
-					<dt><a href="#"><span>热门话题</span></a></dt>
-					<dt><a href="#"><span>阅读随笔</span></a></dt>
-					<dt><a href="#"><span>创作之家</span></a></dt>
-					</dl>
-					</dt>
-					<dt><a href="#"><span>站长随笔</span></a></dt>-->
-					<dt><a href="#"><span>联系我们</span></a></dt>
-					<dt>
-							<a href="#"><span>个人中心</span></a>
-							<dl class="sub">
-								<dt><a href="#"><span>登录</span></a></dt>
-					<dt><a href="#"><span>注册</span></a></dt>
-					</dl>
-					</dt>
+									<dt><a href="../login.html"><span>登录</span></a></dt>
+						<dt><a href="../reg.html"><span>注册</span></a></dt>
+							</dl>
+						</dt>
 					</dl>
 				</div>
 				<div class="search">
-					<table>
-						<tr>
-							<td id="search_text">
-								<input type="text" value=" 有什么想找的，试试看吧" id="searchText" height="30px" size="15" />
-							</td>
-							<td id="search_img">
-								<a href="#">
-									<img src="../img/main/搜索框按钮图标.png" />
-								</a>
-							</td>
-						</tr>
-					</table>
+					<form id="do-search" method="post" action="searchResult.jsp">
+						<table>
+							<tr>
+								<td id="search_text">
+									<input type="text" placeholder="有什么想找的，试试看吧" id="searchText" height="30px" size="15" />
+								</td>
+								<td id="search_img">
+									<a href="javascript:document.getElementById('do-search').submit()">
+										<img src="../img/main/搜索框按钮图标.png" />
+									</a>
+								</td>
+							</tr>
+						</table>
+					</form>
 				</div>
-				<div class="reg_title">
-					<div class="reg_title_bg"></div>
-					<div class="reg_title_contain">
-						<span>个人中心</span>
-						<br />
-						<span id="title_2">user</span>
-					</div>
-				</div>
-			</div>
 			<div class="main" id="personalCenter_main">
 				<div class="personalCenter_main_left">
 					<div class="adminbox">
@@ -131,9 +100,15 @@
 								<span>admin</span>
 							</p>
 							<select>
-								<option><a href="#">国产网文</a></option>
-								<option><a href="#">日产轻文</a></option>
-								<option><a href="#">国学永存</a></option>
+								<option>
+									<a href="#">国产网文</a>
+								</option>
+								<option>
+									<a href="#">日产轻文</a>
+								</option>
+								<option>
+									<a href="#">国学永存</a>
+								</option>
 							</select>
 							<div class="admintitle edit_sec sec">
 								<a href="adminuser.html">用户管理</a>
@@ -142,107 +117,103 @@
 							</div>
 						</div>
 						<div class="admininfo workinfo">
-							<table>
-								<tr>
-									<td>
-										
-										<a class="admincover" href="javascript:"><img src="../img/main/cover/路人女主4.jpg" /></a>
+							<dl>
+								<dt class="book">
+									<div class="imgbox">
+										<img src="../img/main/cover/路人女主4.jpg" />
+									</div>
+									<div class="checkedit">
 										<div class="book_info">
 											<a href="javascript:" class="bookinfo book_title" title="路人女主的养成方法">路人女主的养成方法</a>
 											<a href="javascript:" class="bookinfo book_author">丸户史明</a>
 										</div>
 										<div class="book_edit">
-											<a href="javascript:" class="bookedit">评论</a>
+											<a href="javascript:" class="bookedit">推荐</a>
 											<a href="javascript:" class="bookedit">删除</a>
 										</div>
-									</td>
-									<td>
-										<a class="admincover" href="javascript:"><img src="../img/main/cover/路人女主4.jpg" /></a>
+									</div>
+								</dt>
+								<dt class="book">
+									<div class="imgbox">
+										<img src="../img/main/cover/路人女主4.jpg" />
+									</div>
+									<div class="checkedit">
 										<div class="book_info">
 											<a href="javascript:" class="bookinfo book_title" title="路人女主的养成方法">路人女主的养成方法</a>
 											<a href="javascript:" class="bookinfo book_author">丸户史明</a>
 										</div>
 										<div class="book_edit">
-											<a href="javascript:" class="bookedit">评论</a>
+											<a href="javascript:" class="bookedit">推荐</a>
 											<a href="javascript:" class="bookedit">删除</a>
 										</div>
-									</td>
-									<td>
-										<a class="admincover" href="javascript:"><img src="../img/main/cover/路人女主4.jpg" /></a>
+									</div>
+								</dt>
+								<dt class="book">
+									<div class="imgbox">
+										<img src="../img/main/cover/路人女主4.jpg" />
+									</div>
+									<div class="checkedit">
 										<div class="book_info">
 											<a href="javascript:" class="bookinfo book_title" title="路人女主的养成方法">路人女主的养成方法</a>
 											<a href="javascript:" class="bookinfo book_author">丸户史明</a>
 										</div>
 										<div class="book_edit">
-											<a href="javascript:" class="bookedit">评论</a>
+											<a href="javascript:" class="bookedit">推荐</a>
 											<a href="javascript:" class="bookedit">删除</a>
 										</div>
-									</td>
-									<td>
-										<a class="admincover" href="javascript:"><img src="../img/main/cover/路人女主4.jpg" /></a>
+									</div>
+								</dt>
+								<dt class="book">
+									<div class="imgbox">
+										<img src="../img/main/cover/路人女主4.jpg" />
+									</div>
+									<div class="checkedit">
 										<div class="book_info">
 											<a href="javascript:" class="bookinfo book_title" title="路人女主的养成方法">路人女主的养成方法</a>
 											<a href="javascript:" class="bookinfo book_author">丸户史明</a>
 										</div>
 										<div class="book_edit">
-											<a href="javascript:" class="bookedit">评论</a>
+											<a href="javascript:" class="bookedit">推荐</a>
 											<a href="javascript:" class="bookedit">删除</a>
 										</div>
-									</td>
-								</tr>
-								<tr>
-									<td>
-										
-										<a class="admincover" href="javascript:"><img src="../img/main/cover/路人女主4.jpg" /></a>
+									</div>
+								</dt>
+								<dt class="book">
+									<div class="imgbox">
+										<img src="../img/main/cover/路人女主4.jpg" />
+									</div>
+									<div class="checkedit">
 										<div class="book_info">
 											<a href="javascript:" class="bookinfo book_title" title="路人女主的养成方法">路人女主的养成方法</a>
 											<a href="javascript:" class="bookinfo book_author">丸户史明</a>
 										</div>
 										<div class="book_edit">
-											<a href="javascript:" class="bookedit">评论</a>
+											<a href="javascript:" class="bookedit">推荐</a>
 											<a href="javascript:" class="bookedit">删除</a>
 										</div>
-									</td>
-									<td>
-										<a class="admincover" href="javascript:"><img src="../img/main/cover/路人女主4.jpg" /></a>
+									</div>
+								</dt>
+								<dt class="book">
+									<div class="imgbox">
+										<img src="../img/main/cover/路人女主4.jpg" />
+									</div>
+									<div class="checkedit">
 										<div class="book_info">
 											<a href="javascript:" class="bookinfo book_title" title="路人女主的养成方法">路人女主的养成方法</a>
 											<a href="javascript:" class="bookinfo book_author">丸户史明</a>
 										</div>
 										<div class="book_edit">
-											<a href="javascript:" class="bookedit">评论</a>
+											<a href="javascript:" class="bookedit">推荐</a>
 											<a href="javascript:" class="bookedit">删除</a>
 										</div>
-									</td>
-									<td>
-										<a class="admincover" href="javascript:"><img src="../img/main/cover/路人女主4.jpg" /></a>
-										<div class="book_info">
-											<a href="javascript:" class="bookinfo book_title" title="路人女主的养成方法">路人女主的养成方法</a>
-											<a href="javascript:" class="bookinfo book_author">丸户史明</a>
-										</div>
-										<div class="book_edit">
-											<a href="javascript:" class="bookedit">评论</a>
-											<a href="javascript:" class="bookedit">删除</a>
-										</div>
-									</td>
-									<td>
-										<a class="admincover" href="javascript:"><img src="../img/main/cover/路人女主4.jpg" /></a>
-										<div class="book_info">
-											<a href="javascript:" class="bookinfo book_title" title="路人女主的养成方法">路人女主的养成方法</a>
-											<a href="javascript:" class="bookinfo book_author">丸户史明</a>
-										</div>
-										<div class="book_edit">
-											<a href="javascript:" class="bookedit">评论</a>
-											<a href="javascript:" class="bookedit">删除</a>
-										</div>
-									</td>
-								</tr>
-							</table>
-						</div>
-						<div class="pagecontain">
-							<input type="button" class="btn prew" value="<" />
-							<span>1/1页 </span>
-							<input type="button" class="btn prew" value=">" />
+									</div>
+								</dt>
+								<dt class="pagecontain">
+									<input type="button" class="btn prew" value="<" />
+									<span>1/1页 </span>
+									<input type="button" class="btn next" value=">" />
+								</dt>
+							</dl>
 						</div>
 					</div>
 				</div>
@@ -259,4 +230,5 @@
 			</div>
 		</div>
 	</body>
+
 </html>
