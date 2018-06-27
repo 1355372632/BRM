@@ -13,13 +13,13 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <base href="<%=basePath%>">
 <title>管理员-评论管理</title>
-		<link rel="stylesheet" href="../css/ZR.css" />
-		<link rel="stylesheet" href="../css/reg.css" />
-		<link rel="stylesheet" href="../css/pCenter.css" />
-		<link rel="stylesheet" href="../css/pindex.css" />
-		<link rel="stylesheet" href="../css/workedit.css" />
-		<link rel="stylesheet" href="../css/admin_edit.css" />
-		<script type="text/javascript" src="../js/jquery-1.11.0.min.js" ></script>
+		<link rel="stylesheet" href="css/ZR.css" />
+		<link rel="stylesheet" href="css/reg.css" />
+		<link rel="stylesheet" href="css/pCenter.css" />
+		<link rel="stylesheet" href="css/pindex.css" />
+		<link rel="stylesheet" href="css/workedit.css" />
+		<link rel="stylesheet" href="css/admin_edit.css" />
+		<script type="text/javascript" src="js/jquery-1.11.0.min.js" ></script>
 		<script type="text/javascript">
 			$(function(){
 				$(".zero").click(function(){
@@ -118,7 +118,7 @@
 						</div>
 						<div class="adminname fontpart">丸户史明</div>
 						<div class="adminlink">
-							<a href="admin_infoEdit.html">
+							<a href="personalCenterLink/admin_infoEdit">
 								<span class="btn adminset">设置</span>
 							</a>
 							<a href="../index.html">
@@ -128,20 +128,20 @@
 					</div>
 					<dl class="leftnav">
 						<dt>
-							<a href="admin_index.html" class="opennav">个人主页</a>
+							<a href="personalCenterLink/admin_index" class="opennav">个人主页</a>
 						</dt>
 						<dt>
-							<a href="admin_mood.html" class="opennav">心情</a>
+							<a href="personalCenterLink/admin_mood" class="opennav">心情</a>
 						</dt>
 						<dt>
 							<a href="javascript:void(0)" class="opennav">账号管理</a>
 							<div class="navsonbox">
-								<a href="admin_infoEdit.html">信息设置</a>
-								<a href="passwd.html">安全管理</a>
+								<a href="personalCenterLink/admin_infoEdit">信息设置</a>
+								<a href="personalCenterLink/passwd">安全管理</a>
 							</div>
 						</dt>
 						<dt>
-							<a href="workedit.html" class="opennav active">投稿管理</a>
+							<a href="personalCenterLink/workedit" class="opennav active">投稿管理</a>
 						</dt>
 					</dl>
 				</div>

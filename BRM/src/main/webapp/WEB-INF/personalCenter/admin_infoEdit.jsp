@@ -104,7 +104,7 @@
 					<div class="adminpic">
 						<img src="../img/login/bg.jpg" />
 					</div>
-					<div class="adminname fontpart">丸户史明</div>
+					<div class="adminname fontpart">${user.userinfo.uName }</div>
 					<div class="adminlink">
 						<a href="admin_infoEdit.html"> <span class="btn adminset">设置</span>
 						</a> <a href="../index.html"> <span class="btn adminout">退出</span>
@@ -137,7 +137,7 @@
 					</div>
 					<div class="onebox">
 						<div class="admintitle edit_sec">
-							<a href="admin_infoEdit.html" class="active">基本信息</a> 
+							<a href="personalCenterLink/admin_infoEdit" class="active">基本信息</a> 
 							<a href="iconUpload.html">上传头像</a>
 						</div>
 						<div class="databox">
@@ -321,7 +321,7 @@
 									<tr>
 										<th>爱好 <br /> (以,分隔)
 										</th>
-										<td><textarea class="hobby"></textarea></td>
+										<td><textarea name="hobby" class="hobby"></textarea></td>
 									</tr>
 									<script>
 										$("#birthcitybox").citySelect({

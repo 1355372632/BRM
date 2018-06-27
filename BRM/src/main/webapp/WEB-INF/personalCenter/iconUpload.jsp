@@ -13,17 +13,17 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <base href="<%=basePath%>">
 <title>账号管理-信息设置-上传头像</title>
-		<link rel="stylesheet" href="../css/ZR.css" />
-		<link rel="stylesheet" href="../css/reg.css" />
-		<link rel="stylesheet" href="../css/pCenter.css" />
-		<link rel="stylesheet" href="../css/pindex.css" />
-		<link rel="stylesheet" href="../css/mood.css" />
-		<link rel="stylesheet" href="../css/iconupload.css" type="text/css" />
-		<link rel="stylesheet" href="../css/admin_edit.css" />
-		<script type="text/javascript" src="../js/jquery-1.11.0.min.js" ></script>
-		<script type="text/javascript" src="../js/cropbox.js"></script>
-		<script type="text/javascript" src="../js/iconwin.js" ></script>
-		<script type="text/javascript" src="../js/clickEvent.js" ></script>
+		<link rel="stylesheet" href="css/ZR.css" />
+		<link rel="stylesheet" href="css/reg.css" />
+		<link rel="stylesheet" href="css/pCenter.css" />
+		<link rel="stylesheet" href="css/pindex.css" />
+		<link rel="stylesheet" href="css/mood.css" />
+		<link rel="stylesheet" href="css/iconupload.css" type="text/css" />
+		<link rel="stylesheet" href="css/admin_edit.css" />
+		<script type="text/javascript" src="js/jquery-1.11.0.min.js" ></script>
+		<script type="text/javascript" src="js/cropbox.js"></script>
+		<script type="text/javascript" src="js/iconwin.js" ></script>
+		<script type="text/javascript" src="js/clickEvent.js" ></script>
 	</head>
 	<body>
 		<div class="box" id="personalCenter_box">
@@ -91,7 +91,7 @@
 					<div class="reg_title_contain">
 						<span>个人中心</span>
 						<br />
-						<span id="title_2">user</span>
+						<span id="title_2">${user.userinfo.uName }</span>
 					</div>
 				</div>
 			</div>
@@ -113,20 +113,20 @@
 					</div>
 					<dl class="leftnav">
 						<dt>
-							<a href="admin_index.html" class="opennav">个人主页</a>
+							<a href="personalCenterLink/admin_index" class="opennav">个人主页</a>
 						</dt>
 						<dt>
-							<a href="admin_mood.html" class="opennav">心情</a>
+							<a href="personalCenterLink/admin_mood" class="opennav">心情</a>
 						</dt>
 						<dt>
 							<a href="javascript:void(0)" class="opennav active">账号管理</a>
 							<div class="navsonbox">
-								<a href="admin_infoEdit.html" style="color: hotpink;">信息设置</a>
-								<a href="passwd.html">安全管理</a>
+								<a href="personalCenterLinkadmin_infoEdit" style="color: hotpink;">信息设置</a>
+								<a href="personalCenterLink/passwd">安全管理</a>
 							</div>
 						</dt>
 						<dt>
-							<a href="workedit.html" class="opennav">投稿管理</a>
+							<a href="personalCenterLink/workedit" class="opennav">投稿管理</a>
 						</dt>
 					</dl>
 				</div>
@@ -137,8 +137,8 @@
 						</div>
 						<div class="onebox">
 							<div class="admintitle edit_sec">
-								<a href="admin_infoEdit.html">基本信息</a>
-								<a href="iconUpload.html" class="active">上传头像</a>
+								<a href="personalCenterLink/admin_infoEdit">基本信息</a>
+								<a href="personalCenterLink/iconUpload" class="active">上传头像</a>
 							</div>
 							<div class="iconmake">
 								<div class="container">

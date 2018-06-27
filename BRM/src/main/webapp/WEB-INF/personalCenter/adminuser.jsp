@@ -13,14 +13,14 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <base href="<%=basePath%>">
 <title>管理员-用户管理</title>
-		<link rel="stylesheet" href="../css/ZR.css" />
-		<link rel="stylesheet" href="../css/reg.css" />
-		<link rel="stylesheet" href="../css/pCenter.css" />
-		<link rel="stylesheet" href="../css/pindex.css" />
-		<link rel="stylesheet" href="../css/workedit.css" />
-		<link rel="stylesheet" href="../css/admin_edit.css" />
-		<link rel="stylesheet" href="../css/adminuser.css" />
-		<script type="text/javascript" src="../js/jquery-1.11.0.min.js" ></script>
+		<link rel="stylesheet" href="css/ZR.css" />
+		<link rel="stylesheet" href="css/reg.css" />
+		<link rel="stylesheet" href="css/pCenter.css" />
+		<link rel="stylesheet" href="css/pindex.css" />
+		<link rel="stylesheet" href="css/workedit.css" />
+		<link rel="stylesheet" href="css/admin_edit.css" />
+		<link rel="stylesheet" href="css/adminuser.css" />
+		<script type="text/javascript" src="js/jquery-1.11.0.min.js" ></script>
 		<script type="text/javascript">
 			
 		</script>
@@ -103,7 +103,7 @@
 						</div>
 						<div class="adminname fontpart">丸户史明</div>
 						<div class="adminlink">
-							<a href="admin_infoEdit.html">
+							<a href="personalCenterLink/admin_infoEdit">
 								<span class="btn adminset">设置</span>
 							</a>
 							<a href="../index.html">
@@ -113,10 +113,10 @@
 					</div>
 					<dl class="leftnav">
 						<dt>
-							<a href="admin_index.html" class="opennav">个人主页</a>
+							<a href="personalCenterLink/admin_index" class="opennav">个人主页</a>
 						</dt>
 						<dt>
-							<a href="admin_mood.html" class="opennav">心情</a>
+							<a href="personalCenterLink/admin_mood" class="opennav">心情</a>
 						</dt>
 						<dt>
 							<a href="javascript:void(0)" class="opennav">账号管理</a>
@@ -137,9 +137,9 @@
 								<span>admin</span>
 							</p>
 							<div class="admintitle edit_sec sec">
-								<a href="adminuser.html" class="active">用户管理</a>
+								<a href="personalCenterLink/adminuser" class="active">用户管理</a>
 								<a href="adminbook.html">书籍管理</a>
-								<a href="review.html" class="hov">评论管理</a>
+								<a href="personalCenterLink/review" class="hov">评论管理</a>
 							</div>
 						</div>
 						<div class="userinfo">

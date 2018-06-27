@@ -139,13 +139,13 @@
 						<table>
 							<tr>
 								<td><span class="infosign sex">性别：</span> <span
-									class="infotext sex">男</span></td>
+									class="infotext sex">${user.userinfo.uName}</span></td>
 								<td><span class="infosign married">婚恋：</span> <span
-									class="infotext married">已婚</span></td>
+									class="infotext married">${user.userinfo.uMarry}</span></td>
 							</tr>
 							<tr>
 								<td><span class="infosign birth">生日：</span> <span
-									class="infotext birth">0-0-0</span></td>
+									class="infotext birth">${user.userinfo.uBirthDay}</span></td>
 								<td>
 									<!--此td最多显示5条信息--> <span class="infosign like">爱好：</span> <span
 									class="infotext like">创作</span> <span class="infotext like">运动</span>

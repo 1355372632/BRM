@@ -49,7 +49,7 @@ public interface UserInfoDao {
 	* @return: boolean
 	* @throws
 	 */
-	@Update("update from userinfo set uName=#{uName},uState=#{uState},uPicPath=#{uPicPath},uDesc=#{uDesc},uSex=#{uSex},uMarry=#{uMarry},uBirthDay=#{uBirthDay},uHobby=#{uHobby} where userid=#{userid}")
+	@Update("update  userinfo set uName=#{uName},uState=#{uState},uPicPath=#{uPicPath},uDesc=#{uDesc},uSex=#{uSex},uMarry=#{uMarry},uBirthDay=#{uBirthDay},uHobby=#{uHobby} where userid=#{userid}")
 	public boolean editUserInfo(UserInfo userinfo);
 	/**
 	 * 
@@ -60,6 +60,6 @@ public interface UserInfoDao {
 	* @return: boolean
 	* @throws
 	 */
-	@Delete("delete from where uinfoid =#{uinfoid}")
+	@Delete("delete from Userinfo where uinfoid =#{uinfoid}")
 	public boolean delUserInfo(int uInfoID);
 }
