@@ -103,9 +103,9 @@
 						<div class="adminpic">
 							<img src="img/login/bg.jpg" />
 						</div>
-						<div class="adminname fontpart">丸户史明</div>
+						<div class="adminname fontpart">${user.userinfo.uName }</div>
 						<div class="adminlink">
-							<a href="admin_infoEdit.html">
+							<a href="personalCenterLink/admin_infoEdit">
 								<span class="btn adminset">设置</span>
 							</a>
 							<a href="../index.html">
@@ -123,7 +123,7 @@
 						<dt>
 							<a href="javascript:void(0)" class="opennav active">账号管理</a>
 							<div class="navsonbox">
-								<a href="personalCenterLinkadmin_infoEdit" style="color: hotpink;">信息设置</a>
+								<a href="personalCenterLink/admin_infoEdit" style="color: hotpink;">信息设置</a>
 								<a href="personalCenterLink/passwd">安全管理</a>
 							</div>
 						</dt>

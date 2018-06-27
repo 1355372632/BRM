@@ -118,7 +118,7 @@
 						<div class="adminpic">
 							<img src="img/login/bg.jpg" />
 						</div>
-						<div class="adminname fontpart">丸户史明</div>
+						<div class="adminname fontpart">${user.userinfo.uName }</div>
 						<div class="adminlink">
 							<a href="personalCenterLink/admin_infoEdit">
 								<span class="btn adminset">设置</span>
@@ -158,7 +158,7 @@
 								<a href="javascript:" class="zero active">>0</a>
 								<a href="javascript:" class="ten">>10</a>
 								<a href="javascript:" class="han">>100</a>
-								<a href="adminuser.html" class="hov">返回</a>
+								<a href="personalCenterLink/adminuser" class="hov">返回</a>
 							</div>
 						</div>
 						<div class="reviewinfo">

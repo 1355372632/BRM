@@ -65,10 +65,10 @@
 					</dt>
 					<dt><a href="#"><span>站长随笔</span></a></dt>-->
 					<dt>
-						<a href="#"><span>联系我们</span></a>
+						<a href="link/lianxi"><span>联系我们</span></a>
 					</dt>
 					<dt>
-						<a href="#"><span>个人中心</span></a>
+						<a href="personalCenterLink/admin_index"><span>个人中心</span></a>
 						<dl class="sub">
 							<dt>
 								<a href="link/login"><span>登录</span></a>

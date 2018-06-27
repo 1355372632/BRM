@@ -98,7 +98,7 @@
 						<div class="adminpic">
 							<img src="img/login/bg.jpg" />
 						</div>
-						<div class="adminname fontpart">丸户史明</div>
+						<div class="adminname fontpart">${user.userinfo.uName }</div>
 						<div class="adminlink">
 							<a href="admin_infoEdit.html">
 								<span class="btn adminset">设置</span>

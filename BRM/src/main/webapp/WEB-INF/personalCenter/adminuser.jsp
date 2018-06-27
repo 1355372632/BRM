@@ -103,7 +103,7 @@
 						<div class="adminpic">
 							<img src="img/login/bg.jpg" />
 						</div>
-						<div class="adminname fontpart">丸户史明</div>
+						<div class="adminname fontpart">${user.userinfo.uName }</div>
 						<div class="adminlink">
 							<a href="personalCenterLink/admin_infoEdit">
 								<span class="btn adminset">设置</span>
@@ -114,24 +114,23 @@
 						</div>
 					</div>
 					<dl class="leftnav">
-						<dt>
-							<a href="personalCenterLink/admin_index" class="opennav">个人主页</a>
-						</dt>
-						<dt>
-							<a href="personalCenterLink/admin_mood" class="opennav">心情</a>
-						</dt>
-						<dt>
-							<a href="javascript:void(0)" class="opennav">账号管理</a>
-							<div class="navsonbox">
-								<a href="admin_infoEdit.html">信息设置</a>
-								<a href="passwd.html">安全管理</a>
-							</div>
-						</dt>
-						<dt>
-							<a href="workedit.html" class="opennav active">投稿管理</a>
-						</dt>
-					</dl>
-				</div>
+					<dt>
+						<a href="personalCenterLink/admin_index" class="opennav">个人主页</a>
+					</dt>
+					<dt>
+						<a href="personalCenterLink/admin_mood" class="opennav">心情</a>
+					</dt>
+					<dt>
+						<a href="personalCenterLink/admin_infoEdit" class="opennav">账号管理</a>
+						<div class="navsonbox">
+							<a href="personalCenterLink/admin_infoEdit">信息设置</a> <a href="personalCenterLink/passwd.">安全管理</a>
+						</div>
+					</dt>
+					<dt>
+						<a href="personalCenterLink/workedit" class="opennav active">投稿管理</a>
+					</dt>
+				</dl>
+			</div>
 				<div class="personalCenter_main_right">
 					<div class="mainbox">
 						<div class="admintitle infotitle edittitle">
@@ -140,7 +139,7 @@
 							</p>
 							<div class="admintitle edit_sec sec">
 								<a href="personalCenterLink/adminuser" class="active">用户管理</a>
-								<a href="adminbook.html">书籍管理</a>
+								<a href="personalCenterLink/adminbook">书籍管理</a>
 								<a href="personalCenterLink/review" class="hov">评论管理</a>
 							</div>
 						</div>
