@@ -69,7 +69,7 @@
 						<span class="book-desc">${book.bookDesc}</span>
 						<div class="bookbtn">
 							<input class="book-btn book-read" type="button" value="点击阅读" onclick="location.href='main/read/0'"/>
-							<input class="book-btn book-download" type="button" value="下载" />
+							<input class="book-btn book-download" type="button" value="下载" onclick="location.href='main/download/${book.bookID}'"/>
 						</div>
 					</div>
 				</div>
