@@ -66,17 +66,22 @@
 					</dt>
 				</dl>
 			</div>
-			<div class="search">
-				<table>
-					<tr>
-						<td id="search_text"><input type="text" value=" 有什么想找的，试试看吧"
-							id="searchText" height="30px" size="15" /></td>
-						<td id="search_img"><a href="#"> <img
-								src="../img/main/搜索框按钮图标.png" />
-						</a></td>
-					</tr>
-				</table>
-			</div>
+			div class="search">
+					<form id="do-search" method="post" action="searchResult.jsp">
+						<table>
+							<tr>
+								<td id="search_text">
+									<input type="text" placeholder="有什么想找的，试试看吧" id="searchText" height="30px" size="15" />
+								</td>
+								<td id="search_img">
+									<a href="javascript:document.getElementById('do-search').submit()">
+										<img src="img/main/搜索框按钮图标.png" />
+									</a>
+								</td>
+							</tr>
+						</table>
+					</form>
+				</div>
 			<div class="reg_title">
 				<div class="reg_title_bg"></div>
 				<div class="reg_title_contain">
@@ -120,8 +125,7 @@
 				<div class="mainbox">
 					<div class="admintop">
 						<div class="admintopname">
-							${user.userinfo.uName } <a href="javascript:void(0)">轻小说作家</a> <a
-								href="javascript:void(0)">剧本创作者</a>
+							${user.userinfo.uName } 
 						</div>
 						<div class="admintopmsg">2018/5/23,打代码，头疼</div>
 					</div>
