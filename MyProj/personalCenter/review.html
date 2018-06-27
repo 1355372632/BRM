@@ -39,62 +39,39 @@
 					<dl class="menu">
 						<dt><a href="../index.html"><span>首页</span></a></dt>
 						<dt>
-							<a href="#"><span>轻小说</span></a>
-							<!--<dl class="sub">
-								<dt><a href="#"><span>站长小推荐</span></a></dt>
-						<dt><a href="#"><span>动画化相关</span></a></dt>
-						<dt><a href="#"><span>经典回忆录</span></a></dt>
-					</dl>-->
-					</dt>
-					<dt>
-							<a href="#"><span>网络小说</span></a>
-							<!--<dl class="sub">
-								<dt><a href="#"><span>站长小推荐</span></a></dt>
-					<dt><a href="#"><span>连载进行时</span></a></dt>
-					<dt><a href="#"><span>完结回忆录</span></a></dt>
-					</dl>-->
-					</dt>
-					<dt>
-							<a href="#"><span>文学作品</span></a>
-							<!--<dl class="sub">
-								<dt><a href="#"><span>文艺故事会</span></a></dt>
-					<dt><a href="#"><span>哲学讨论组</span></a></dt>
-					<dt><a href="#"><span>人物传奇史</span></a></dt>
-					</dl>-->
-					</dt>
-					<!--<dt>
-							<a href="#"><span>综合讨论</span></a>
+							<a href="../light.html"><span>轻小说</span></a>
+						</dt>
+						<dt>
+							<a href="../web.html"><span>网络小说</span></a>
+						</dt>
+						<dt>
+							<a href="../literature.html"><span>文学作品</span></a>
+						</dt>
+						<dt><a href="../lianxi.jsp"><span>联系我们</span></a></dt>
+						<dt>
+							<a href="admin_index.html"><span>个人中心</span></a>
 							<dl class="sub">
-								<dt><a href="#"><span>相关资讯</span></a></dt>
-					<dt><a href="#"><span>热门话题</span></a></dt>
-					<dt><a href="#"><span>阅读随笔</span></a></dt>
-					<dt><a href="#"><span>创作之家</span></a></dt>
-					</dl>
-					</dt>
-					<dt><a href="#"><span>站长随笔</span></a></dt>-->
-					<dt><a href="#"><span>联系我们</span></a></dt>
-					<dt>
-							<a href="#"><span>个人中心</span></a>
-							<dl class="sub">
-								<dt><a href="#"><span>登录</span></a></dt>
-					<dt><a href="#"><span>注册</span></a></dt>
-					</dl>
-					</dt>
+									<dt><a href="../login.html"><span>登录</span></a></dt>
+						<dt><a href="../reg.html"><span>注册</span></a></dt>
+							</dl>
+						</dt>
 					</dl>
 				</div>
 				<div class="search">
-					<table>
-						<tr>
-							<td id="search_text">
-								<input type="text" value=" 有什么想找的，试试看吧" id="searchText" height="30px" size="15" />
-							</td>
-							<td id="search_img">
-								<a href="#">
-									<img src="../img/main/搜索框按钮图标.png" />
-								</a>
-							</td>
-						</tr>
-					</table>
+					<form id="do-search" method="post" action="searchResult.jsp">
+						<table>
+							<tr>
+								<td id="search_text">
+									<input type="text" placeholder="有什么想找的，试试看吧" id="searchText" height="30px" size="15" />
+								</td>
+								<td id="search_img">
+									<a href="javascript:document.getElementById('do-search').submit()">
+										<img src="../img/main/搜索框按钮图标.png" />
+									</a>
+								</td>
+							</tr>
+						</table>
+					</form>
 				</div>
 				<div class="reg_title">
 					<div class="reg_title_bg"></div>
