@@ -32,20 +32,7 @@ import cn.edu.zjweu.entity.Users;
 public class UserController { 
 	@Resource // 注入bean，相当于new一个对象
 	private UserDao userdao;
-	/**
-	 * 
-	* @Title: xyz
-	* @Description: 用于存放属性
-	* @param: @param model
-	* @return: void
-	* @throws
-	 */
-	@ModelAttribute
-	public void xyz(Model model){
-		Users user = null;
-		model.addAttribute("user",user);
-		
-	}
+
 	/**
 	 * 
 	* @Title: path
