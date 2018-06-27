@@ -1,10 +1,5 @@
 Manifest-Version: 1.0
-<<<<<<< HEAD
 Built-By: XiDong
 Build-Jdk: 1.8.0_161
-=======
-Built-By: yin
-Build-Jdk: 1.8.0_172
->>>>>>> debd34cb8f1abfd221e0fd1a314e72d66e42c5dc
 Created-By: Maven Integration for Eclipse
 
