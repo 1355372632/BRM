@@ -30,7 +30,7 @@
 						<dl>
 							<dt><a href="index.html"><span>首页</span></a></dt>
 							<dt>
-							<a href="#"><span>轻小说</span></a>
+							<a href="light.jsp"><span>轻小说</span></a>
 							<!--<dl class="sub">
 								<dt><a href="#" title="站长小推荐"><span>站长小推荐</span></a></dt>
 							<dt><a href="#" title="动画化相关"><span>动画化相关</span></a></dt>
@@ -38,7 +38,7 @@
 						</dl>-->
 						</dt>
 						<dt>
-							<a href="#"><span>网络小说</span></a>
+							<a href="light.jsp"><span>网络小说</span></a>
 							<!--<dl class="sub">
 								<dt><a href="#" title="站长小推荐"><span>站长小推荐</span></a></dt>
 						<dt><a href="#" title="连载进行时"><span>连载进行时</span></a></dt>
@@ -46,7 +46,7 @@
 						</dl>-->
 						</dt>
 						<dt>
-							<a href="#"><span>文学作品</span></a>
+							<a href="literature.jsp"><span>文学作品</span></a>
 							<!--<dl class="sub">
 								<dt><a href="#" title="文艺故事会"><span>文艺故事会</span></a></dt>
 						<dt><a href="#" title="哲学讨论组"><span>哲学讨论组</span></a></dt>
@@ -63,12 +63,12 @@
 						</dl>
 						</dt>
 						<dt><a href="#"><span>站长随笔</span></a></dt>-->
-						<dt><a href="#"><span>联系我们</span></a></dt>
+						<dt><a href="lianxi.jsp"><span>联系我们</span></a></dt>
 						<dt>
 							<a href="personalCenter/admin_index.html"><span>个人中心</span></a>
 							<dl class="sub">
-								<dt><a href="#"><span>登录</span></a></dt>
-						<dt><a href="#"><span>注册</span></a></dt>
+								<dt><a href="login.jsp"><span>登录</span></a></dt>
+						<dt><a href="reg.jsp"><span>注册</span></a></dt>
 						</dl>
 						</dt>
 						</dl>

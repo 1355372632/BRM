@@ -47,7 +47,7 @@
 					<dl class="menu">
 						<dt><a href="index.html"><span>首页</span></a></dt>
 						<dt>
-							<a href="#"><span>轻小说</span></a>
+							<a href="light.jsp"><span>轻小说</span></a>
 							<!--<dl class="sub">
 								<dt><a href="#"><span>站长小推荐</span></a></dt>
 						<dt><a href="#"><span>动画化相关</span></a></dt>
@@ -55,7 +55,7 @@
 					</dl>-->
 					</dt>
 					<dt>
-							<a href="#"><span>网络小说</span></a>
+							<a href="web.jsp"><span>网络小说</span></a>
 							<!--<dl class="sub">
 								<dt><a href="#"><span>站长小推荐</span></a></dt>
 					<dt><a href="#"><span>连载进行时</span></a></dt>
@@ -63,7 +63,7 @@
 					</dl>-->
 					</dt>
 					<dt>
-							<a href="#"><span>文学作品</span></a>
+							<a href="literature.jsp"><span>文学作品</span></a>
 							<!--<dl class="sub">
 								<dt><a href="#"><span>文艺故事会</span></a></dt>
 					<dt><a href="#"><span>哲学讨论组</span></a></dt>
@@ -80,7 +80,7 @@
 					</dl>
 					</dt>
 					<dt><a href="#"><span>站长随笔</span></a></dt>-->
-					<dt><a href="#"><span>联系我们</span></a></dt>
+					<dt><a href="lianxi.jsp"><span>联系我们</span></a></dt>
 					<dt>
 							<a href="#"><span>个人中心</span></a>
 							<dl class="sub">

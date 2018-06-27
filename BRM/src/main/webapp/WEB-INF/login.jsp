@@ -65,7 +65,7 @@
 					</dl>
 					</dt>
 					<dt><a href="#"><span>站长随笔</span></a></dt>-->
-					<dt><a href="#"><span>联系我们</span></a></dt>
+					<dt><a href="lianxi.jsp"><span>联系我们</span></a></dt>
 					<dt>
 							<a href="#"><span>个人中心</span></a>
 							<dl class="sub">

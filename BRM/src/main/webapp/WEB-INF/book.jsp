@@ -29,19 +29,19 @@
 						<dl>
 							<dt><a href="index.html"><span>首页</span></a></dt>
 							<dt>
-							<a href="#"><span>轻小说</span></a>
+							<a href="light.jsp"><span>轻小说</span></a>
 						</dt>
 						<dt>
-							<a href="#"><span>网络小说</span></a>
+							<a href="web.jsp"><span>网络小说</span></a>
 						</dt>
 						<dt>
-							<a href="#"><span>文学作品</span></a>
+							<a href="literature.jsp"><span>文学作品</span></a>
 						</dt>
 						<dt>
 							<a href="personalCenter/admin_index.html"><span>个人中心</span></a>
 							<dl class="sub">
-								<dt><a href="#"><span>登录</span></a></dt>
-						<dt><a href="#"><span>注册</span></a></dt>
+								<dt><a href="login.jsp"><span>登录</span></a></dt>
+						<dt><a href="reg.jsp"><span>注册</span></a></dt>
 						</dl>
 						</dt>
 						</dl>
