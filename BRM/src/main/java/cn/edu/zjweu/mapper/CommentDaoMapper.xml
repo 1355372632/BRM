@@ -13,12 +13,12 @@
 	</select>
 	
 	<select id="getCommentsByBookId" parameterType="int" resultType="Comment">
-		select comments.* from comments where bookid=#{bookID} and commentid=INID
+		select comments.* from comments where bookid=#{bookID} and INID=0 order by commentid
 	</select>
 	
 	<select id="getCommentsByInid" parameterType="int" resultType="Comment">
 		<!-- select * from (select comment.*,rownum rn from comment where inid=#{0} order by commentID ) where  rn between #{1} and #{2} -->
-		select * from comments where INID=#{INID}
+		select * from comments where INID=#{INID} order by commentid
 	</select>
 	
 	<insert id="addComment" parameterType="Comment" useGeneratedKeys="false" keyProperty="commentID">

@@ -58,6 +58,7 @@ public class IndexController {
 	* @return: void
 	* @throws
 	 */
+	
 	@ModelAttribute
 	public void init(Model model){
 		Users user = userservice.getUserById("zerok");
@@ -78,32 +79,13 @@ public class IndexController {
 	* @return: String
 	* @throws
 	 */
-	@RequestMapping("index")
-	public String Index(Model model){
-		return "index";
+	@RequestMapping("{path}")
+	public String Index(@PathVariable String path ,Model model){
+		return path;
 	}
 	@RequestMapping("book/{bookid}")
 	public String book(@PathVariable int  bookid,Model model){
-		Book book = bookservice.getBookByBookID(bookid);
-		book.setSections(sectionservice.getAllSectionByBid(bookid));
-
-		List<Comment> comment = new ArrayList<Comment>();
-				comment=commentservice.getCommentsByBookId(bookid);
-		int i=0;
-		int j=0;
-		while(i++<comment.size()){
-			comment.get(i-1).setComment(commentservice.getCommentsByInid(comment.get(i-1).getCommentID()));
-			comment.get(i-1).setcUser(userservice.getUserById(comment.get(i-1).getUserID()));
-			while(j++<comment.get(i-1).getComment().size()){
-				Comment c= comment.get(i-1).getComment().get(j-1);
-				comment.get(i-1).getComment().get(j-1).setcUser(userservice.getUserById(c.getUserID()));
-			}
-			
-		}
-		model.addAttribute("comment",comment);
-		System.out.println(comment.get(0).getComment().get(0).getcUser().toString());
-//		comment.get(0).getcUser().getUserinfo().getuName();
-		model.addAttribute("book",book);
+		init(bookid, model);
 		return "book";
 	}
 	@RequestMapping("read/{sid}")
@@ -127,20 +109,30 @@ public class IndexController {
 		return "index";
 		
 	}
-	@RequestMapping("review/{indexNum}")
-	public String review(@PathVariable int indexNum,Model model){
+	@RequestMapping("review/{bookid}/{indexNum}")
+	public String review(@PathVariable int  bookid,@PathVariable int indexNum,Model model){
+		init(bookid, model);
 		model.addAttribute("indexNum",indexNum);
 		return "review";
 	}
-/*	@RequestMapping("review/doreview")
-	public String doreview(){
-		
-		return "review";
-	}
-	*/
+	
 	@PostMapping("/doreview")
 	@ResponseBody //必须加入的注解
-	public  JSONObject  dologin(@RequestBody Comment c,Model model) {
+	public  JSONObject  doreview(@RequestBody Comment c,Model model) {
+		JSONObject json = new JSONObject();
+		
+		System.out.println("comment:"+c.toString());
+		boolean flag=commentservice.addComment(c); 
+		if(flag)
+			json.put("msg", true);
+		else
+			json.put("msg", false);
+		return json;  
+	}
+
+	@PostMapping("/review/donewreview")
+	@ResponseBody //必须加入的注解
+	public  JSONObject  new_review(@RequestBody Comment c,Model model) {
 		JSONObject json = new JSONObject();
 		
 		System.out.println("comment:"+c.toString());
@@ -155,7 +147,7 @@ public class IndexController {
 	public void createBookFile(Book book,HttpServletRequest request) {
 		//创建文件
 		String filename = book.getBookName()+".txt";//
-		String path = request.getServletContext().getRealPath("/txt/");
+		String path = request.getServletContext().getRealPath("WEB-INF/txt/");
 		File file = new File(path); 
 		if (!file.exists()) {
 			file.mkdirs();
@@ -201,7 +193,7 @@ System.out.println(file.getAbsolutePath());
 	}
 	public void down(Book book,HttpServletRequest request,HttpServletResponse response) throws Exception{
         //模拟文件，myfile.txt为需要下载的文件
-        String fileName = request.getServletContext().getRealPath("/txt")+"/"+book.getBookName()+".txt";//
+        String fileName = request.getServletContext().getRealPath("WEB-INF/txt")+"/"+book.getBookName()+".txt";//
         //获取输入流
         InputStream bis = new BufferedInputStream(new FileInputStream(new File(fileName)));
         //假如以中文名下载的话
@@ -220,5 +212,27 @@ System.out.println(file.getAbsolutePath());
         }
         out.close();
     }
+	public void init(int bookid,Model model){
+		Book book = bookservice.getBookByBookID(bookid);
+		book.setSections(sectionservice.getAllSectionByBid(bookid));
 
+		List<Comment> comment = new ArrayList<Comment>();
+				comment=commentservice.getCommentsByBookId(bookid);
+		int i=0;
+		int j=0;
+		while(i++<comment.size()){
+			comment.get(i-1).setComment(commentservice.getCommentsByInid(comment.get(i-1).getCommentID()));
+			comment.get(i-1).setcUser(userservice.getUserById(comment.get(i-1).getUserID()));
+			while(j++<comment.get(i-1).getComment().size()){
+				Comment c= comment.get(i-1).getComment().get(j-1);
+				comment.get(i-1).getComment().get(j-1).setcUser(userservice.getUserById(c.getUserID()));
+			}
+			
+		}
+		model.addAttribute("comment",comment);
+//		System.out.println(comment.get(0).getComment().get(0).getcUser().toString());
+//		comment.get(0).getcUser().getUserinfo().getuName();
+		model.addAttribute("book",book);
+	}
+	 
 }

@@ -51,7 +51,7 @@ public interface BookDao {
 	@Select("select * from Book where bookAuthor=#{bookAuthor} ")
 	public List<Book> getBooksByAuthor(String authorName,int a,int b);//根据作者查询书籍，并进行分页查询
 	
-	@Select("select * from Book where bookID=#{bookID}")
+	@Select("select * from Book where bookID=#{bookID} ")
 	public Book getBookByBookID(int bookid);	//根据书籍编号查询
 	
 	

@@ -131,9 +131,9 @@
 							<span class="text_title">确认密码</span>
 							<input class="form_text" type="text" size="30" id="upwd_check" /><span class="sign" id="span3" style="padding:0px 8px;border-radius:50%;color:white"></span>
 							<br />
-							<!-- <span class="text_title">昵称</span>
+							<span class="text_title">昵称</span>
 							<input class="form_text" type="text" size="30" id="uname" /><span class="sign" id="span4" style="padding:0px 8px;border-radius:50%;color:white"></span>
-							<br /> -->
+							<br /> 
 							<span class="text_title">邮箱</span>
 							<input class="form_text" type="text" size="30" id="uemail" /><span class="sign" id="span5" style="padding:0px 8px;border-radius:50%;color:white"></span>
 							<br />
