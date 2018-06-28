@@ -21,19 +21,25 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.SessionAttributes;
 
+import com.alibaba.fastjson.JSONObject;
+
 import cn.edu.zjweu.entity.Book;
-import cn.edu.zjweu.entity.Section;
+import cn.edu.zjweu.entity.Comment;
 import cn.edu.zjweu.entity.Users;
 import cn.edu.zjweu.service.BookService;
+import cn.edu.zjweu.service.CommentService;
 import cn.edu.zjweu.service.SectionService;
 import cn.edu.zjweu.service.UserService;
 
 @Controller
 @RequestMapping("/main")
-@SessionAttributes("book")
+@SessionAttributes(value={"book","comment","user"})
 public class IndexController {
 	@Resource // 注入bean，相当于new一个对象
 	private UserService userservice;
@@ -41,6 +47,8 @@ public class IndexController {
 	private BookService bookservice;
 	@Resource
 	private SectionService sectionservice;
+	@Resource
+	private CommentService commentservice;
 	
 	/**
 	 * 
@@ -52,20 +60,14 @@ public class IndexController {
 	 */
 	@ModelAttribute
 	public void init(Model model){
-		Users user = null;
+		Users user = userservice.getUserById("zerok");
 		model.addAttribute("user",user);
 		List<Book> blist = new ArrayList<Book>();
 		blist = bookservice.getBooksByHits();
 		model.addAttribute("bookhits",blist);//点击榜
 		blist = bookservice.getBooksByCreateDate();
-		for(Book b: blist){
-			System.out.println(b.getBookName()+""+b.getCreateDate());
-		}
 		model.addAttribute("bookcreat",blist);//新书榜
 		blist = bookservice.getBooksByEndDate();
-		for(Book b: blist){
-			System.out.println(b.getBookName()+""+b.getEndDate());
-		}
 		model.addAttribute("bookend",blist);//完结榜
 	}
 	/**
@@ -84,9 +86,23 @@ public class IndexController {
 	public String book(@PathVariable int  bookid,Model model){
 		Book book = bookservice.getBookByBookID(bookid);
 		book.setSections(sectionservice.getAllSectionByBid(bookid));
-		for(Section s:book.getSections())
-		System.out.println(s.getSectionTitle());
-		
+
+		List<Comment> comment = new ArrayList<Comment>();
+				comment=commentservice.getCommentsByBookId(bookid);
+		int i=0;
+		int j=0;
+		while(i++<comment.size()){
+			comment.get(i-1).setComment(commentservice.getCommentsByInid(comment.get(i-1).getCommentID()));
+			comment.get(i-1).setcUser(userservice.getUserById(comment.get(i-1).getUserID()));
+			while(j++<comment.get(i-1).getComment().size()){
+				Comment c= comment.get(i-1).getComment().get(j-1);
+				comment.get(i-1).getComment().get(j-1).setcUser(userservice.getUserById(c.getUserID()));
+			}
+			
+		}
+		model.addAttribute("comment",comment);
+		System.out.println(comment.get(0).getComment().get(0).getcUser().toString());
+//		comment.get(0).getcUser().getUserinfo().getuName();
 		model.addAttribute("book",book);
 		return "book";
 	}
@@ -110,6 +126,30 @@ public class IndexController {
 		}
 		return "index";
 		
+	}
+	@RequestMapping("review/{indexNum}")
+	public String review(@PathVariable int indexNum,Model model){
+		model.addAttribute("indexNum",indexNum);
+		return "review";
+	}
+/*	@RequestMapping("review/doreview")
+	public String doreview(){
+		
+		return "review";
+	}
+	*/
+	@PostMapping("/doreview")
+	@ResponseBody //必须加入的注解
+	public  JSONObject  dologin(@RequestBody Comment c,Model model) {
+		JSONObject json = new JSONObject();
+		
+		System.out.println("comment:"+c.toString());
+		boolean flag=commentservice.addComment(c); 
+		if(flag)
+			json.put("msg", true);
+		else
+			json.put("msg", false);
+		return json;  
 	}
 	
 	public void createBookFile(Book book,HttpServletRequest request) {

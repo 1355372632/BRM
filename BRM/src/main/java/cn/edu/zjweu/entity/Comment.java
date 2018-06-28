@@ -18,7 +18,7 @@ public class Comment {
 	private int cReported;//被举报次数
 	private int hits;//点击量
 	private List<Comment> comment;//存放子评论
-	
+	private Users cUser;
 	/**
 	 * 获取子评论
 	 * @return list
@@ -97,7 +97,19 @@ public class Comment {
 		super();
 		// TODO Auto-generated constructor stub
 	}
-	
+	public Users getcUser() {
+		return cUser;
+	}
+	public void setcUser(Users cUser) {
+		this.cUser = cUser;
+	}
+	@Override
+	public String toString() {
+		return "Comment [commentID=" + commentID + ", userID=" + userID + ", commentDate=" + commentDate + ", content="
+				+ content + ", INID=" + INID + ", bookID=" + bookID + ", cReported=" + cReported + ", hits=" + hits
+				+ ", comment=" + comment + ", cUser=" + cUser + "]";
+	}
+
 	
 	
 	

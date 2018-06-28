@@ -94,21 +94,22 @@
 						<dt><a href="javascript:">全部(666)</a><a class="sendrev" href="new_review.html">我要发帖</a></dt>
 					</dl>
 					<dl class="rev-text">
+					<c:forEach var="c" items="${comment}" varStatus="vs">
 						<dt class="review-post">
 							<div class="usericon">
 								<img src="img/login/bg.jpg" />
 							</div>
 							<div class="revpart" >
-								<a class="username" href="javascript:">丸户史明</a>&nbsp;<span>发表了帖子</span>
+								<a class="username" href="javascript:">${c.cUser.userinfo.uName }</a>&nbsp;<span>发表了帖子</span>
 								<div class="textpost">
-									<a class="answer" href="review.html">
-										所以说一直就很喜欢志鸟村这种平淡中装逼的好书，但对于作者的短小无力我也是比较无奈的，像这种20来张的幼苗真的看了比没看还要闹心啊，有没有同类好书推荐一下，偏门一点的，比较火的基本都看过了。
+									<a class="answer" href="main/review/${vs.index}">
+										${c.content }										
 									</a>
 								</div>
 								<p></p>
 								<div class="flo">
-									<span class="date">2018-05-24 18:20:59</span>
-									<a class="answer" href="review.html"><span>10条回复</span></a>
+									<span class="date">${c.commentDate }</span>
+									<a class="answer" href="review.html"><span>${c.comment.size()}条回复</span></a>
 								</div>
 								<div class="todo">
 									<a class="report" href="javascript:"><span>举报</span></a>
@@ -116,28 +117,7 @@
 								</div>
 							</div>
 						</dt>
-						<dt class="review-post">
-							<div class="usericon">
-								<img src="img/login/bg.jpg" />
-							</div>
-							<div class="revpart" >
-								<a class="username" href="javascript:">丸户史明</a>&nbsp;<span>发表了帖子</span>
-								<div class="textpost">
-									<a class="answer" href="javascript:">
-									所以说一直就很喜欢志鸟村这种平淡中装逼的好书，但对于作者的短小无力我也是比较无奈的，像这种20来张的幼苗真的看了比没看还要闹心啊，有没有同类好书推荐一下，偏门一点的，比较火的基本都看过了。
-								</a>
-								</div>
-								<p></p>
-								<div class="flo">
-									<span class="date">2018-05-24 18:20:59</span>
-									<a class="answer" href="javascript:"><span>10条回复</span></a>
-								</div>
-								<div class="todo">
-									<a class="report" href="javascript:"><span>举报</span></a>
-									<a class="collect" href="javascript:"><span>收藏</span></a>
-								</div>
-							</div>
-						</dt>
+						</c:forEach>
 					</dl>
 				</div>
 			</div>

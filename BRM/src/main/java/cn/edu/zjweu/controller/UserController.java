@@ -22,7 +22,7 @@ import cn.edu.zjweu.entity.Users;
 /**
  * 
 * @ClassName: UserController
-* @Description:主控制器
+* @Description:用户控制器
 * @author: zerok
 * @date: 2018年6月27日 上午8:57:36
 *

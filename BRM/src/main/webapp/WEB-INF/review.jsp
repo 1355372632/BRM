@@ -18,6 +18,37 @@
 		<link rel="stylesheet" href="css/review-page.css" />
 		<script type="text/javascript" src="js/jquery-1.11.0.min.js"></script>
 		<script type="text/javascript" src="js/clickEvent.js"></script>
+		<script type="text/javascript">
+			$(function(){
+				$("#submit").click(function(){
+					alert("111111111111111")
+					var data={userID:$("#userid").val(),content:$("#content").val(),INID:$("#INID").val(),bookID:$("#bookid").val(),cReported:0,hits:0,comment:null,cUser:null}
+					$.ajax({
+						cache:false,
+						url: "http://localhost:8080/BRM/main/doreview",
+						//请求的url地址
+						/* commentid,userid,commentDate,content,INID,bookID,cReported,hits */
+						data: JSON.stringify(data) ,
+						/* data: {commentid:0,commentDate:"",userID:$("#userid").val(),content:$("#content").val(),INID:$("INID").val(),bookID:"",cReported:0,hits:0,comment:null,cUser:null}, */
+						type: "post",
+						//请求方式
+						dataType:"json",
+						 contentType: "application/json",  
+						success: function (data) { 
+							if(data.msg==true){
+								alert("评论成功！");
+								window.location="main/review"+INID;
+								
+							}else if(data.msg==false){
+								alert("评论失败！")
+								window.location = "main/review"+INID;
+							}
+						}
+					});
+
+				})
+			})
+		</script>
 	</head>
 
 	<body>
@@ -93,16 +124,17 @@
 								<div class="revpart" >
 									<dl>
 										<dt>
-											<a class="username" href="javascript:">丸户史明</a>&nbsp;<span>发表了帖子</span>
+											<a class="username" href="javascript:">${comment[indexNum].cUser.userinfo.uName}</a>&nbsp;<span>发表了帖子</span>
 											<div class="textpost">
 												<span class="answer" href="javascript:">
-												所以说一直就很喜欢志鸟村这种平淡中装逼的好书，但对于作者的短小无力我也是比较无奈的，像这种20来张的幼苗真的看了比没看还要闹心啊，有没有同类好书推荐一下，偏门一点的，比较火的基本都看过了。
+												${comment[indexNum].content} 
+
 												</span>
 											</div>
 											<p>
 												<div class="flo">
-													<span class="date">2018-05-24 18:20:59</span>
-													<a class="answer" href="javascript:"><span>10条回复</span></a>
+													<span class="date">${comment[indexNum].commentDate }</span>
+													<!-- <a class="answer" href="javascript:"><span>10条回复</span></a> -->
 												</div>
 												<div class="todo">
 													<a class="report" href="javascript:"><span>举报</span></a>
@@ -112,24 +144,27 @@
 										</dt>
 					</dl>
 				</div>
+				
 				</dt>
+				 <c:forEach var="c" items="${comment[indexNum].comment}"> 
 				<dt class="review-post">
 								<div class="usericon fl">
 									<img src="img/login/bg.jpg" />
 								</div>
 								<div class="revpart" >
 									<dl>
+									
 										<dt>
-											<a class="username" href="javascript:">丸户史明</a>&nbsp;<span>发表了帖子</span>
+											<a class="username" href="javascript:">${c.cUser.userinfo.userID}</a>&nbsp;<span>发表了帖子</span>
 											<div class="textpost">
 												<span class="answer" href="javascript:">
-												所以说一直就很喜欢志鸟村这种平淡中装逼的好书，但对于作者的短小无力我也是比较无奈的，像这种20来张的幼苗真的看了比没看还要闹心啊，有没有同类好书推荐一下，偏门一点的，比较火的基本都看过了。
+												${c.content}
 												</span>
 											</div>
 											<p>
 												<div class="flo">
-													<span class="date">2018-05-24 18:20:59</span>
-													<a class="answer" href="javascript:"><span>10条回复</span></a>
+													<span class="date">${c.commentDate }</span>
+													<!-- <a class="answer" href="javascript:"><span>10条回复</span></a> -->
 												</div>
 												<div class="todo">
 													<a class="report" href="javascript:"><span>举报</span></a>
@@ -137,9 +172,11 @@
 												</div>
 											</p>
 										</dt>
+										
 				</dl>
 			</div>
 			</dt>
+			 </c:forEach> 
 			</dl>
 			<div class="write-review">
 				<form class="revform" action="" method="post">
@@ -148,12 +185,15 @@
 							<a href="javascript:"><img src="img/login/bg.jpg" /></a>
 						</div>
 						<div class="name">
-							<a href="javascript:"><b>丸户史明</b></a>
+							<a href="javascript:"><b>${user.userinfo.uName}</b></a>
 						</div>
 					</div>
-					<textarea class="commit" placeholder="请输入回复内容"></textarea>
+					<textarea id="content" class="commit" placeholder="请输入回复内容"></textarea>
+					<input type="hidden" id="userid" value="${user.userID}" />
+					<input type="hidden" id="bookid" value="${comment[indexNum].bookID}" />
+					<input type="hidden" id="INID" value="${comment[indexNum].commentID}" />
 					<div class="btn">
-						<input id="submit" type="button" value="发表回复" onclick="this.form.submit()" />
+						<input id="submit" type="button" value="发表回复"  />
 					</div>
 				</form>
 			</div>
