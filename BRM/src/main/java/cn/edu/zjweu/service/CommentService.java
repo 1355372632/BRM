@@ -14,4 +14,6 @@ public List<Comment> getAllComments();//获取所有评论
 	public boolean addComment(Comment comment);//添加评论
 	
 	public int getCommentHits();//获取评论点击量
+	
+	public int delComment(int commentID);
 }

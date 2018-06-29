@@ -119,7 +119,30 @@
 					</div>
 					<div class="admininfo workinfo">
 						<dl>
-							<dt class="book">
+							<c:forEach var="books" items="${userBooks }">
+								<dt class="book">
+								<div class="imgbox">
+									<img src="img/main/cover/路人女主4.jpg" />
+								</div>
+								<div class="checkedit">
+									<div class="book_info">
+										<a href="javascript:" class="bookinfo book_title"
+											title="${books.bookName }">${books.bookName }</a> <a href="javascript:"
+											class="bookinfo book_author"${books.bookAuthor }></a>
+									</div>
+									<div class="book_edit">
+										<a href="javascript:" class="bookedit">修改</a> <a
+											href="javascript:" class="bookedit">删除</a>
+									</div>
+								</div>
+							</dt>
+							</c:forEach>
+						
+						
+							
+							
+							
+							<!-- <dt class="book">
 								<div class="imgbox">
 									<img src="img/main/cover/路人女主4.jpg" />
 								</div>
@@ -198,23 +221,7 @@
 											href="javascript:" class="bookedit">删除</a>
 									</div>
 								</div>
-							</dt>
-							<dt class="book">
-								<div class="imgbox">
-									<img src="img/main/cover/路人女主4.jpg" />
-								</div>
-								<div class="checkedit">
-									<div class="book_info">
-										<a href="javascript:" class="bookinfo book_title"
-											title="路人女主的养成方法">路人女主的养成方法</a> <a href="javascript:"
-											class="bookinfo book_author">丸户史明</a>
-									</div>
-									<div class="book_edit">
-										<a href="javascript:" class="bookedit">修改</a> <a
-											href="javascript:" class="bookedit">删除</a>
-									</div>
-								</div>
-							</dt>
+							</dt> -->
 							<dt class="pagecontain">
 								<input type="button" class="btn prew" value="&lt" /> <span>1/1页
 								</span> <input type="button" class="btn next" value=">" />

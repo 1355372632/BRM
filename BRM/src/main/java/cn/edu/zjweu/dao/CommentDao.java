@@ -23,4 +23,6 @@ public interface CommentDao {
 	public boolean addComment(Comment comment);//添加评论
 	
 	public int getCommentHits();//获取评论点击量
+	
+	public int delComment(int commentID);//根据评论编号删除评论
 }

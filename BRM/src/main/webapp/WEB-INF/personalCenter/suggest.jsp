@@ -128,12 +128,16 @@
 					</div>
 					<div class="admininfo workinfo">
 						<dl>
-							<dt class="suggest" data-id="1">
+							<c:forEach var="books" items="${bangdan }">
+								<dt class="suggest">
 								<div class="sugbook">
-									<span>摸狗神功</span> <a href="javascript:">删除</a>
+									<span>${books.bookName }</span> <a href="javascript:">删除</a>
 								</div>
 							</dt>
-							<dt class="suggest" data-id="2">
+							</c:forEach>
+							
+							
+							<!-- <dt class="suggest" data-id="2">
 								<div class="sugbook">
 									<span>摸狗神功</span> <a href="javascript:">删除</a>
 								</div>
@@ -177,7 +181,7 @@
 								<div class="sugbook">
 									<span>摸狗神功</span> <a href="javascript:">删除</a>
 								</div>
-							</dt>
+							</dt> -->
 						</dl>
 					</div>
 				</div>

@@ -13,17 +13,17 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <base href="<%=basePath%>">
 <title>我的空间-章节修改</title>
-		<link rel="stylesheet" href="../css/ZR.css" />
-		<link rel="stylesheet" href="../css/reg.css" />
-		<link rel="stylesheet" href="../css/pCenter.css" />
-		<link rel="stylesheet" href="../css/pindex.css" />
-		<link rel="stylesheet" href="../css/workedit.css" />
-		<link rel="stylesheet" href="../css/iconupload.css" />
-		<link rel="stylesheet" href="../css/newbook.css" />
-		<link rel="stylesheet" type="text/css" href="../css/bookedit.css" />
-		<script type="text/javascript" src="../js/jquery-1.11.0.min.js"></script>
-		<script type="text/javascript" src="../js/cropbox.js"></script>
-		<script type="text/javascript" src="../js/bookedit.js"></script>
+		<link rel="stylesheet" href="css/ZR.css" />
+		<link rel="stylesheet" href="css/reg.css" />
+		<link rel="stylesheet" href="css/pCenter.css" />
+		<link rel="stylesheet" href="css/pindex.css" />
+		<link rel="stylesheet" href="css/workedit.css" />
+		<link rel="stylesheet" href="css/iconupload.css" />
+		<link rel="stylesheet" href="css/newbook.css" />
+		<link rel="stylesheet" type="text/css" href="css/bookedit.css" />
+		<script type="text/javascript" src="js/jquery-1.11.0.min.js"></script>
+		<script type="text/javascript" src="js/cropbox.js"></script>
+		<script type="text/javascript" src="js/bookedit.js"></script>
 		<style type="text/css">
 			.button {
 				margin-top: 15px;

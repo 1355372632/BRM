@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8" isELIgnored="false"%>
 <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
-<%@ taglib uri="http://www.springframework.org/tags" prefix="spring" %>
+<%@ taglib uri="http://www.springframework.org/tags" prefix="spring"%>
 <%
 	String path = request.getContextPath();
 	String basePath = request.getScheme() + "://" + request.getServerName() + ":" + request.getServerPort()
@@ -13,20 +13,20 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <base href="<%=basePath%>">
 <title>管理员-用户管理</title>
-		<link rel="stylesheet" href="css/ZR.css" />
-		<link rel="stylesheet" href="css/reg.css" />
-		<link rel="stylesheet" href="css/pCenter.css" />
-		<link rel="stylesheet" href="css/pindex.css" />
-		<link rel="stylesheet" href="css/workedit.css" />
-		<link rel="stylesheet" href="css/admin_edit.css" />
-		<link rel="stylesheet" href="css/adminuser.css" />
-		<script type="text/javascript" src="js/jquery-1.11.0.min.js" ></script>
-		<script type="text/javascript">
-			
-		</script>
-	</head>
-	<body>
-		<div class="box" id="personalCenter_box">
+<link rel="stylesheet" href="css/ZR.css" />
+<link rel="stylesheet" href="css/reg.css" />
+<link rel="stylesheet" href="css/pCenter.css" />
+<link rel="stylesheet" href="css/pindex.css" />
+<link rel="stylesheet" href="css/workedit.css" />
+<link rel="stylesheet" href="css/admin_edit.css" />
+<link rel="stylesheet" href="css/adminuser.css" />
+<script type="text/javascript" src="js/jquery-1.11.0.min.js"></script>
+<script type="text/javascript">
+	
+</script>
+</head>
+<body>
+	<div class="box" id="personalCenter_box">
 		<div class="bg" id="reg_bg"></div>
 		<div class="top_box">
 			<div class="menu_bg" id="reg_menu_bg"></div>
@@ -44,7 +44,7 @@
 					</dt>
 					<dt>
 						<a href="link/literature"><span>文学作品</span></a>
-						
+
 					</dt>
 					<!--<dt>
 							<a href="#"><span>综合讨论</span></a>
@@ -72,48 +72,43 @@
 					</dt>
 				</dl>
 			</div>
-				<div class="search">
-					<form id="do-search" method="post" action="searchResult.jsp">
-						<table>
-							<tr>
-								<td id="search_text">
-									<input type="text" placeholder="有什么想找的，试试看吧" id="searchText" height="30px" size="15" />
-								</td>
-								<td id="search_img">
-									<a href="javascript:document.getElementById('do-search').submit()">
-										<img src="img/main/搜索框按钮图标.png" />
-									</a>
-								</td>
-							</tr>
-						</table>
-					</form>
-				</div>
-				<div class="reg_title">
-					<div class="reg_title_bg"></div>
-					<div class="reg_title_contain">
-						<span>个人中心</span>
-						<br />
-						<span id="title_2">user</span>
-					</div>
+			<div class="search">
+				<form id="do-search" method="post" action="searchResult.jsp">
+					<table>
+						<tr>
+							<td id="search_text"><input type="text"
+								placeholder="有什么想找的，试试看吧" id="searchText" height="30px"
+								size="15" /></td>
+							<td id="search_img"><a
+								href="javascript:document.getElementById('do-search').submit()">
+									<img src="img/main/搜索框按钮图标.png" />
+							</a></td>
+						</tr>
+					</table>
+				</form>
+			</div>
+			<div class="reg_title">
+				<div class="reg_title_bg"></div>
+				<div class="reg_title_contain">
+					<span>个人中心</span> <br /> <span id="title_2">user</span>
 				</div>
 			</div>
-			<div class="main" id="personalCenter_main">
-				<div class="personalCenter_main_left">
-					<div class="adminbox">
-						<div class="adminpic">
-							<img src="img/login/bg.jpg" />
-						</div>
-						<div class="adminname fontpart">${user.userinfo.uName }</div>
-						<div class="adminlink">
-							<a href="personalCenterLink/admin_infoEdit">
-								<span class="btn adminset">设置</span>
-							</a>
-							<a href="../index.html">
-								<span class="btn adminout">退出</span>
-							</a>
-						</div>
+		</div>
+		<div class="main" id="personalCenter_main">
+			<div class="personalCenter_main_left">
+				<div class="adminbox">
+					<div class="adminpic">
+						<img src="img/login/bg.jpg" />
 					</div>
-					<dl class="leftnav">
+					<div class="adminname fontpart">${user.userinfo.uName }</div>
+					<div class="adminlink">
+						<a href="personalCenterLink/admin_infoEdit"> <span
+							class="btn adminset">设置</span>
+						</a> <a href="../index.html"> <span class="btn adminout">退出</span>
+						</a>
+					</div>
+				</div>
+				<dl class="leftnav">
 					<dt>
 						<a href="personalCenterLink/admin_index" class="opennav">个人主页</a>
 					</dt>
@@ -123,7 +118,8 @@
 					<dt>
 						<a href="personalCenterLink/admin_infoEdit" class="opennav">账号管理</a>
 						<div class="navsonbox">
-							<a href="personalCenterLink/admin_infoEdit">信息设置</a> <a href="personalCenterLink/passwd.">安全管理</a>
+							<a href="personalCenterLink/admin_infoEdit">信息设置</a> <a
+								href="personalCenterLink/passwd.">安全管理</a>
 						</div>
 					</dt>
 					<dt>
@@ -131,118 +127,49 @@
 					</dt>
 				</dl>
 			</div>
-				<div class="personalCenter_main_right">
-					<div class="mainbox">
-						<div class="admintitle infotitle edittitle">
-							<p>
-								<span>admin</span>
-							</p>
-							<div class="admintitle edit_sec sec">
-								<a href="personalCenterLink/adminuser" class="active">用户管理</a>
-								<a href="personalCenterLink/adminbook">书籍管理</a>
-								<a href="personalCenterLink/review" class="hov">评论管理</a>
-							</div>
+			<div class="personalCenter_main_right">
+				<div class="mainbox">
+					<div class="admintitle infotitle edittitle">
+						<p>
+							<span>admin</span>
+						</p>
+						<div class="admintitle edit_sec sec">
+							<a href="personalCenterLink/adminuser" class="active">用户管理</a> <a
+								href="personalCenterLink/adminbook">书籍管理</a> <a
+								href="personalCenterLink/review" class="hov">评论管理</a>
 						</div>
-						<div class="userinfo">
-							<dl>
-								<dt><span class="uid">uid</span>&nbsp;&nbsp;
-									<span class="uname">uname</span>
-									<a href="javascript:">删除</a>
-									<a href="javascript:">封禁</a>
-									<a href="javascript:">修改权限</a>
+					</div>
+					<div class="userinfo">
+						<dl>
+							<dt>
+								<span></span>
+							</dt>
+							<c:forEach var="adminEditUser" items="${adminEditUser }">
+								<dt>
+									<span class="uid">${adminEditUser.userID }</span>&nbsp;&nbsp; 
+									<span class="uname">${ adminEditUser.userinfo.uName}</span>
+									<span class="ustate">${ adminEditUser.userinfo.uState}</span>
+									<a href="userInfoController/deluser/${adminEditUser.userID}">删除</a> 
+									<a href="userInfoController/edituserstate/${adminEditUser.userID}">封禁</a> 
 								</dt>
-								<dt><span class="uid">uid</span>&nbsp;&nbsp;
-									<span class="uname">uname</span>
-									<a href="javascript:">删除</a>
-									<a href="javascript:">封禁</a>
-									<a href="javascript:">修改权限</a>
-								</dt>
-								<dt><span class="uid">uid</span>&nbsp;&nbsp;
-									<span class="uname">uname</span>
-									<a href="javascript:">删除</a>
-									<a href="javascript:">封禁</a>
-									<a href="javascript:">修改权限</a>
-								</dt>
-								<dt><span class="uid">uid</span>&nbsp;&nbsp;
-									<span class="uname">uname</span>
-									<a href="javascript:">删除</a>
-									<a href="javascript:">封禁</a>
-									<a href="javascript:">修改权限</a>
-								</dt>
-								<dt><span class="uid">uid</span>&nbsp;&nbsp;
-									<span class="uname">uname</span>
-									<a href="javascript:">删除</a>
-									<a href="javascript:">封禁</a>
-									<a href="javascript:">修改权限</a>
-								</dt>
-								<dt><span class="uid">uid</span>&nbsp;&nbsp;
-									<span class="uname">uname</span>
-									<a href="javascript:">删除</a>
-									<a href="javascript:">封禁</a>
-									<a href="javascript:">修改权限</a>
-								</dt>
-								<dt><span class="uid">uid</span>&nbsp;&nbsp;
-									<span class="uname">uname</span>
-									<a href="javascript:">删除</a>
-									<a href="javascript:">封禁</a>
-									<a href="javascript:">修改权限</a>
-								</dt>
-								<dt><span class="uid">uid</span>&nbsp;&nbsp;
-									<span class="uname">uname</span>
-									<a href="javascript:">删除</a>
-									<a href="javascript:">封禁</a>
-									<a href="javascript:">修改权限</a>
-								</dt>
-								<dt><span class="uid">uid</span>&nbsp;&nbsp;
-									<span class="uname">uname</span>
-									<a href="javascript:">删除</a>
-									<a href="javascript:">封禁</a>
-									<a href="javascript:">修改权限</a>
-								</dt>
-								<dt><span class="uid">uid</span>&nbsp;&nbsp;
-									<span class="uname">uname</span>
-									<a href="javascript:">删除</a>
-									<a href="javascript:">封禁</a>
-									<a href="javascript:">修改权限</a>
-								</dt>
-								<dt><span class="uid">uid</span>&nbsp;&nbsp;
-									<span class="uname">uname</span>
-									<a href="javascript:">删除</a>
-									<a href="javascript:">封禁</a>
-									<a href="javascript:">修改权限</a>
-								</dt>
-								<dt><span class="uid">uid</span>&nbsp;&nbsp;
-									<span class="uname">uname</span>
-									<a href="javascript:">删除</a>
-									<a href="javascript:">封禁</a>
-									<a href="javascript:">修改权限</a>
-								</dt>
-								<dt><span class="uid">uid</span>&nbsp;&nbsp;
-									<span class="uname">uname</span>
-									<a href="javascript:">删除</a>
-									<a href="javascript:">封禁</a>
-									<a href="javascript:">修改权限</a>
-								</dt>
-							</dl>
-						</div>
-						<div class="pagecontain">
-							<input type="button" class="btn prew" value="&lt" />
-							<span>1/1页 </span>
-							<input type="button" class="btn prew" value="&gt" />
-						</div>
+							</c:forEach>
+
+						
+						</dl>
+					</div>
+					<div class="pagecontain">
+						<input type="button" class="btn prew" value="&lt" /> <span>1/1页
+						</span> <input type="button" class="btn prew" value="&gt" />
 					</div>
 				</div>
 			</div>
-			<div class="personalCenter_bottom">
-				<div class="footsign">
-					<p>
-						互联网ICP备案：闽ICP备12004074号-8 闽网文（2015）1788-036号
-					</p>
-					<p>
-						© 2016 本站不提供任何视听上传服务，所有内容均来自用户所提供的公开引用资源
-					</p>
-				</div>
+		</div>
+		<div class="personalCenter_bottom">
+			<div class="footsign">
+				<p>互联网ICP备案：闽ICP备12004074号-8 闽网文（2015）1788-036号</p>
+				<p>© 2016 本站不提供任何视听上传服务，所有内容均来自用户所提供的公开引用资源</p>
 			</div>
 		</div>
-	</body>
+	</div>
+</body>
 </html>

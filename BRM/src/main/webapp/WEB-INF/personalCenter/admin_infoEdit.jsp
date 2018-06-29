@@ -150,7 +150,7 @@
 								<table>
 									<tr>
 										<th>昵称</th>
-										<td><input type="text" id="name" name="name" value
+										<td><input type="text" id="name"  value="${user.userinfo.uName }"
 											class="t_input" /></td>
 									</tr>
 									<tr>

@@ -19,6 +19,33 @@
 		<link rel="stylesheet" href="css/pindex.css" />
 		<link rel="stylesheet" href="css/mood.css" />
 		<link rel="stylesheet" href="css/admin_edit.css" />
+		<script type="text/javascript" src="js/jquery-1.11.0.min.js" ></script>
+		<script type="text/javascript">
+			$(function(){
+				$("#editemail").click(function(){
+					$.ajax({
+						type:"POST",
+						url:"userInfoController/editemail",
+						data:{upwd:$("#upwd").val(),
+								email1:$("#email1").val(),
+								email2:$("#email2").val()},
+						
+						dataType:"json",
+						success:function(data){
+							if(data.msg==true){
+								alert("密保邮箱修改成功");
+								window.location="personalCenterLink/admin_index";
+							}else if(data.msg==false){
+								alert("密保邮箱修改失败");
+								window.location="personalCenterLink/email";
+							}
+								
+						}
+					});	
+				});
+			});
+		
+		</script>
 	</head>
 	<body>
 		<div class="box" id="personalCenter_box">
@@ -119,7 +146,7 @@
 							<a href="javascript:void(0)" class="opennav active">账号管理</a>
 							<div class="navsonbox">
 								<a href="personalCenterLink/admin_infoEdit">信息设置</a>
-								<a href="passwd.html" style="color: hotpink;">安全管理</a>
+								<a href="personalCenterLink/passwd" style="color: hotpink;">安全管理</a>
 							</div>
 						</dt>
 						<dt>
@@ -138,28 +165,28 @@
 								<a href="personalCenterLink/email" class="active">密保邮箱</a>
 							</div>
 							<div class="databox">
-								<form class="admin_form" method="post" >
+								<form class="admin_form"  >
 									<table>
 									<tr>
 										<th>现用邮箱</th>
 										<td>
-											<input type="text" class="pwdtext nowemail" />
+											<input type="text" class="pwdtext nowemail" id="email1" />
 										</td>
 									</tr>
 									<tr>
 										<th>密码验证</th>
 										<td>
-											<input type="text" class="pwdtext oldpwd" />
+											<input type="text" class="pwdtext oldpwd"  id="upwd"/>
 										</td>
 									</tr>
 									<tr>
 										<th>新邮箱</th>
 										<td>
-											<input type="text" class="pwdtext newemail" />
+											<input type="text" class="pwdtext newemail" id="email2" />
 										</td>
 									</tr>
 									<tr>
-										<td colspan="2"><input type="submit" name="profilesubmit" value="修改邮箱" class="infosubmit"></td>
+										<td colspan="2"><input type="button" name="profilesubmit" value="修改邮箱" class="infosubmit" id="editemail"></td>
 									</tr>
 									</table>
 								</form>

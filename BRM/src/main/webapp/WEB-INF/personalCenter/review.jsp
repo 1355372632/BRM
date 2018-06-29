@@ -163,30 +163,16 @@
 						</div>
 						<div class="reviewinfo">
 							<dl>
-								<dt>
-									<a href="javascript:" class="textblock contain">傻逼作者nmsl</a>
+								<c:forEach var="comment" items="${Allcomment }">
+									<dt>
+									<a href="javascript:" class="textblock contain">${comment.content }</a>
 									<div class="admindo">
-										<span class="textblock reported">举报（666）</span>
-										<a href="javascript:">删除</a>
+										<span class="textblock reported">${comment.cReported }</span>
+										<a href="userInfoController/delcomment/${comment.commentID}">删除</a>
 										<a href="javascript:">已处理</a>
 									</div>
 								</dt>
-								<dt>
-									<a href="javascript:" class="textblock contain">啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊阿啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊阿</a>
-									<div class="admindo">
-										<span class="textblock reported">举报（6）</span>
-										<a href="javascript:">删除</a>
-										<a href="javascript:">已处理</a>
-									</div>
-								</dt>
-								<dt>
-									<a href="javascript:" class="textblock contain">臭沙雕</a>
-									<div class="admindo">
-										<span class="textblock reported">举报（50）</span>
-										<a href="javascript:">删除</a>
-										<a href="javascript:">已处理</a>
-									</div>
-								</dt>
+								</c:forEach>
 							</dl>
 						</div>
 						<div class="pagecontain">

@@ -95,10 +95,14 @@ public class UserDaoImpl extends SqlSessionDaoSupport implements UserDao {
 	@Override
 	public boolean editUser(Users users) {
 		SqlSession sqlSession = this.getSqlSession();
+		
 		boolean flag = (sqlSession.update("editUser", users)>0?true:false);
-		if(!(userinfodao.editUserInfo(users.getUserinfo())&&flag))
+		System.out.println("UserDaoImpl+editUser"+flag);
+		boolean bool=userinfodao.editUserInfo(users.getUserinfo());
+		System.out.println("UserDaoImpl+editUser+bool"+bool);
+		if(!(bool&&flag))
 			sqlSession.rollback();
-		return flag;
+		return flag&&bool;
 	}
 	/**
 	 * 

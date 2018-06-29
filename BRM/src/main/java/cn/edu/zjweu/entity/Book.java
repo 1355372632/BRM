@@ -115,6 +115,12 @@ public class Book {
 		super();
 		// TODO Auto-generated constructor stub
 	}
+	@Override
+	public String toString() {
+		return "Book [bookID=" + bookID + ", bTID=" + bTID + ", bookName=" + bookName + ", bookAuthor=" + bookAuthor
+				+ ", bookDesc=" + bookDesc + ", createDate=" + createDate + ", lastRead=" + lastRead + ", endDate="
+				+ endDate + ", bPicPath=" + bPicPath + ", hits=" + hits + ", bookState=" + bookState + "]";
+	}
 	
 	
 	

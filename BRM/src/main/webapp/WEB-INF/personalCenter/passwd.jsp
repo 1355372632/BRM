@@ -19,6 +19,33 @@
 		<link rel="stylesheet" href="css/pindex.css" />
 		<link rel="stylesheet" href="css/mood.css" />
 		<link rel="stylesheet" href="css/admin_edit.css" />
+		<script type="text/javascript" src="js/jquery-1.11.0.min.js" ></script>
+		<script type="text/javascript">
+			$(function(){
+				$("#editpwd").click(function(){
+					$.ajax({
+						type:"POST",
+						url:"userInfoController/editpwd",
+						data:{upwd1:$("#upwd1").val(),
+								upwd2:$("#upwd2").val(),
+								upwd3:$("#upwd3").val()},
+						
+						dataType:"json",
+						success:function(data){
+							if(data.msg==true){
+								alert("密码修改成功");
+								window.location="personalCenterLink/admin_index";
+							}else if(data.msg==false){
+								alert("密码修改失败");
+								window.location="personalCenterLink/passwd";
+							}
+								
+						}
+					});	
+				});
+			});
+		
+		</script>
 	</head>
 	<body>
 		<div class="box" id="personalCenter_box">
@@ -138,28 +165,28 @@
 								<a href="personalCenterLink/email">密保邮箱</a>
 							</div>
 							<div class="databox">
-								<form class="admin_form" method="post" >
+								<form class="admin_form" >
 									<table>
 									<tr>
 										<th>旧密码</th>
 										<td>
-											<input type="text" class="pwdtext oldpwd" />
+											<input type="text" class="pwdtext oldpwd" id="upwd1"/>
 										</td>
 									</tr>
 									<tr>
 										<th>新密码</th>
 										<td>
-											<input type="text" class="pwdtext newpwd" />
+											<input type="text" class="pwdtext newpwd" id="upwd2"/>
 										</td>
 									</tr>
 									<tr>
 										<th>确认密码</th>
 										<td>
-											<input type="text" class="pwdtext renewpwd" />
+											<input type="text" class="pwdtext renewpwd" id="upwd3"/>
 										</td>
 									</tr>
 									<tr>
-										<td colspan="2"><input type="submit" name="profilesubmit" value="修改密码" class="infosubmit"></td>
+										<td colspan="2"><input type="button" name="profilesubmit" value="修改密码" class="infosubmit" id="editpwd"></td>
 									</tr>
 									</table>
 								</form>

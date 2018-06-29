@@ -47,4 +47,10 @@ public class CommentServiceImpl implements CommentService {
 		return commentdao.getCommentHits();
 	}
 
+	@Override
+	public int delComment(int commentID) {
+		// TODO Auto-generated method stub
+		return commentdao.delComment(commentID);
+	}
+
 }

@@ -35,7 +35,7 @@ public interface BookDao {
 	@Select("select * from (select book.*,rownum rn from book where bTID=#{bTID} order by bookid) where  rn between #{begin} and #{end}")
 	public List<Book> getBooksLimitByBtid(@Param("bTID") int btid,@Param("begin") int begin,@Param("end") int end);//根据书籍类型查询并分页查询
 	
-	@Insert("insert into Book values(#{bookID},#{bTID},#{bookName},#{bookAuthor},#{bookDesc},#{createDate},#{lastRead},#{endDate},#{bPicPath},#{hits},#{bookState})")
+	@Insert("insert into Book values(bookid.nextval,#{bTID},#{bookName},#{bookAuthor},#{bookDesc},#{createDate},#{lastRead},#{endDate},#{bPicPath},#{hits},#{bookState})")
 	public boolean addBook(Book book);//添加书籍	
 	
 	@Select("delete from Book where bookID=#{bookID}")

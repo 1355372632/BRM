@@ -13,16 +13,16 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <base href="<%=basePath%>">
 <title>我的空间-上传作品</title>
-		<link rel="stylesheet" href="../css/ZR.css" />
-		<link rel="stylesheet" href="../css/reg.css" />
-		<link rel="stylesheet" href="../css/pCenter.css" />
-		<link rel="stylesheet" href="../css/pindex.css" />
-		<link rel="stylesheet" href="../css/mood.css" />
-		<link rel="stylesheet" href="../css/admin_edit.css" />
-		<link rel="stylesheet" href="../css/iconupload.css" />
-		<link rel="stylesheet" href="../css/newbook.css" />
-		<script type="text/javascript" src="../js/jquery-1.11.0.min.js"></script>
-		<script type="text/javascript" src="../js/cropbox.js"></script>
+		<link rel="stylesheet" href="css/ZR.css" />
+		<link rel="stylesheet" href="css/reg.css" />
+		<link rel="stylesheet" href="css/pCenter.css" />
+		<link rel="stylesheet" href="css/pindex.css" />
+		<link rel="stylesheet" href="css/mood.css" />
+		<link rel="stylesheet" href="css/admin_edit.css" />
+		<link rel="stylesheet" href="css/iconupload.css" />
+		<link rel="stylesheet" href="css/newbook.css" />
+		<script type="text/javascript" src="js/jquery-1.11.0.min.js"></script>
+		<script type="text/javascript" src="js/cropbox.js"></script>
 		<script type="text/javascript" src="../js/bookcover.js"></script>
 	</head>
 
@@ -33,30 +33,19 @@
 				<div class="menu_bg" id="reg_menu_bg"></div>
 				<div class="top_menu">
 					<dl class="menu">
-						<dt><a href="index.html"><span>首页</span></a></dt>
-						<dt>
-							<a href="#"><span>轻小说</span></a>
-							<!--<dl class="sub">
-								<dt><a href="#"><span>站长小推荐</span></a></dt>
-						<dt><a href="#"><span>动画化相关</span></a></dt>
-						<dt><a href="#"><span>经典回忆录</span></a></dt>
-					</dl>-->
+					<dt>
+						<a href="link/index"><span>首页</span></a>
 					</dt>
 					<dt>
-							<a href="#"><span>网络小说</span></a>
-							<!--<dl class="sub">
-								<dt><a href="#"><span>站长小推荐</span></a></dt>
-					<dt><a href="#"><span>连载进行时</span></a></dt>
-					<dt><a href="#"><span>完结回忆录</span></a></dt>
-					</dl>-->
+						<a href="link/light"><span>轻小说</span></a>
+
 					</dt>
 					<dt>
-							<a href="#"><span>文学作品</span></a>
-							<!--<dl class="sub">
-								<dt><a href="#"><span>文艺故事会</span></a></dt>
-					<dt><a href="#"><span>哲学讨论组</span></a></dt>
-					<dt><a href="#"><span>人物传奇史</span></a></dt>
-					</dl>-->
+						<a href="link/web"><span>网络小说</span></a>
+					</dt>
+					<dt>
+						<a href="link/literature"><span>文学作品</span></a>
+						
 					</dt>
 					<!--<dt>
 							<a href="#"><span>综合讨论</span></a>
@@ -68,15 +57,21 @@
 					</dl>
 					</dt>
 					<dt><a href="#"><span>站长随笔</span></a></dt>-->
-					<dt><a href="#"><span>联系我们</span></a></dt>
 					<dt>
-							<a href="#"><span>个人中心</span></a>
-							<dl class="sub">
-								<dt><a href="#"><span>登录</span></a></dt>
-					<dt><a href="#"><span>注册</span></a></dt>
-					</dl>
+						<a href="#"><span>联系我们</span></a>
 					</dt>
-					</dl>
+					<dt>
+						<a href="#"><span>个人中心</span></a>
+						<dl class="sub">
+							<dt>
+								<a href="link/login"><span>登录</span></a>
+							</dt>
+							<dt>
+								<a href="link/reg"><span>注册</span></a>
+							</dt>
+						</dl>
+					</dt>
+				</dl>
 				</div>
 				<div class="search">
 					<table>
@@ -105,9 +100,9 @@
 				<div class="personalCenter_main_left">
 					<div class="adminbox">
 						<div class="adminpic">
-							<img src="../img/login/bg.jpg" />
+							<img src="img/login/bg.jpg" />
 						</div>
-						<div class="adminname fontpart">丸户史明</div>
+						<div class="adminname fontpart">${user.userinfo.uName }</div>
 						<div class="adminextra">
 							<div class="space"></div>
 							<a href="javascript:void(0)">
@@ -122,7 +117,7 @@
 							</a>
 						</div>
 						<div class="adminlink">
-							<a href="../personalCenter/admin_infoEdit.html">
+							<a href="personalCenterLink/admin_infoEdit">
 								<span class="btn adminset">设置</span>
 							</a>
 							<a href="../index.html">
@@ -132,20 +127,20 @@
 					</div>
 					<dl class="leftnav">
 						<dt>
-							<a href="../personalCenter/admin_index.html" class="opennav">个人主页</a>
+							<a href="personalCenterLink/admin_index" class="opennav">个人主页</a>
 						</dt>
 						<dt>
-							<a href="../personalCenter/admin_mood.html" class="opennav">心情</a>
+							<a href="personalCenterLink/admin_mood" class="opennav">心情</a>
 						</dt>
 						<dt>
 							<a href="javascript:void(0)" class="opennav">账号管理</a>
 							<div class="navsonbox">
-								<a href="../personalCenter/admin_infoEdit.html">信息设置</a>
-								<a href="../personalCenter/passwd.html">安全管理</a>
+								<a href="personalCenterLink/admin_infoEdit">信息设置</a>
+								<a href="personalCenterLink/passwd">安全管理</a>
 							</div>
 						</dt>
 						<dt>
-							<a href="../personalCenter/workedit.html" class="opennav active">投稿管理</a>
+							<a href="personalCenterLink/workedit" class="opennav active">投稿管理</a>
 						</dt>
 					</dl>
 				</div>
@@ -156,25 +151,25 @@
 						</div>
 						<div class="onebox">
 							<div class="admintitle edit_sec">
-								<a href="newbook.html" class="active">创建新书</a>
-								<a href="newchap.html">上传章节</a>
+								<a href="uploadLink/newbook" class="active">创建新书</a>
+								<a href="uploadLink/newchap">上传章节</a>
 							</div>
 							<div class="book_upload">
-								<form class="bookform" method="post">
+								<form class="bookform" method="post" action="userInfoController/newbook">
 									<table>
 										<tr>
 											<th>书名</th>
 											<td>
-												<input type="text" class="newbook bookname" />
+												<input type="text" class="newbook bookname" name="bookName" />
 											</td>
 										</tr>
 										<tr>
 											<th>类型</th>
 											<td>
-												<select class="newbook typeselec">
-													<option>国产网文</option>
-													<option>日产轻文</option>
-													<option>国学永存</option>
+												<select class="newbook typeselec" name="type">
+													<option value="1">轻小说</option>
+													<option value="2">网络小说</option>
+													<option value="3">文学作品</option>
 												</select>
 											</td>
 										</tr>
@@ -183,7 +178,7 @@
 												书籍简介
 											</th>
 											<td>
-												<textarea class="bookdesc"></textarea>
+												<textarea class="bookdesc" name="bookdesc"></textarea>
 											</td>
 										</tr>
 										<tr>
@@ -193,6 +188,7 @@
 														<div class="thumbBox"></div>
 														<div class="spinner" style="display: none">Loading...</div>
 													</div>
+													<!---------------------- 上传封面暂时不写了 -->
 													<div class="action">
 														<div class="new-contentarea tc">
 															<a href="javascript:void(0)" class="upload-img">

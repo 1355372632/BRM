@@ -1,5 +1,9 @@
 package cn.edu.zjweu.dao.impl;
 
+import java.util.List;
+
+import javax.annotation.Resource;
+
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.mybatis.spring.support.SqlSessionDaoSupport;
@@ -7,7 +11,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Repository;
 
+import cn.edu.zjweu.dao.BookDao;
+import cn.edu.zjweu.dao.UserDao;
 import cn.edu.zjweu.dao.UserInfoDao;
+import cn.edu.zjweu.entity.Book;
 import cn.edu.zjweu.entity.UserInfo;
 /**
  * 
@@ -19,6 +26,8 @@ import cn.edu.zjweu.entity.UserInfo;
  */
 @Repository("userinfodao")
 public class UserInfoDaoImpl extends SqlSessionDaoSupport implements UserInfoDao {
+@Resource
+private BookDao bookdao;
 
 	
 	@Autowired
@@ -63,11 +72,31 @@ public class UserInfoDaoImpl extends SqlSessionDaoSupport implements UserInfoDao
 	* @return
 	* @see cn.edu.zjweu.dao.UserInfoDao#editUserInfo(cn.edu.zjweu.entity.UserInfo)
 	 */
+	
+	/**
+	 * 
+	 * -----------------------------
+	 * -----------------------------
+	 * ----------------------------=
+	 * ----------------------------
+	 */
 	@Override
 	public boolean editUserInfo(UserInfo userinfo) {
 		SqlSession sqlSession = this.getSqlSession();
 		System.out.println(userinfo.toString());
 		boolean flag = sqlSession.update("editUserInfo", userinfo)>0?true:false;
+		//userinfo是修改之后的，包括用户昵称
+		
+		
+	/*	
+		UserInfo ui = this.getUserInfo(userinfo.getUserID());
+		List<Book> book = bd.getBooksByAuthor(ui.getuName(), 0, 9999);
+		for(int i=0;i<book.size();i++) {
+			book.get(i).setBookAuthor(userinfo.getuName());
+			bd.editBook(book.get(i));
+		}
+		*/
+		System.out.println(flag);
 		return flag;
 	}
 	/**

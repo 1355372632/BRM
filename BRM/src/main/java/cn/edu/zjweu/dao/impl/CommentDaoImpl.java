@@ -61,4 +61,11 @@ public class CommentDaoImpl extends SqlSessionDaoSupport implements CommentDao {
 		return sqlSession.getMapper(CommentDao.class).getCommentHits();
 	}
 
+	@Override
+	public int delComment(int commentID) {
+		SqlSession sqlSession = this.getSqlSession();
+		System.out.println("sqlsession地址"+sqlSession);
+		return sqlSession.getMapper(CommentDao.class).delComment(commentID);
+	}
+
 }
