@@ -63,7 +63,7 @@ public class UserDaoImpl extends SqlSessionDaoSupport implements UserDao {
 	public boolean addUser(Users users) {
 		SqlSession sqlSession = this.getSqlSession();
 		boolean flag = (sqlSession.update("addUser", users)>0?true:false);
-		if(flag){
+		if(users.getUserinfo()!=null){
 			flag=userinfodao.addUserInfo(users.getUserinfo());
 			}
 		if(!flag)

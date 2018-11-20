@@ -23,7 +23,7 @@ $('#mpanel').slideVerify({
 			
 			url: "user/doreg",
 			//请求的url地址
-			data: {userID:$("#uid").val(),uPwd:$("#upwd").val(),uEmail:$("#uemail").val(),uName:$("#uname").val(),uType:2},
+			data: {userID:$("#uid").val(),uPwd:$("#upwd").val(),uEmail:$("#uemail").val(),uType:2},
 			type: "post",
 			//请求方式
 			dataType:"json",

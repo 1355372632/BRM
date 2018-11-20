@@ -18,37 +18,6 @@
 		<link rel="stylesheet" href="css/review-page.css" />
 		<script type="text/javascript" src="js/jquery-1.11.0.min.js" ></script>
 		<script type="text/javascript" src="js/clickEvent.js" ></script>
-		<script type="text/javascript">
-			$(function(){
-				$("#submit").click(function(){
-					
-					var data={userID:$("#userid").val(),content:$("#content").val(),INID:0,bookID:$("#bookid").val(),cReported:0,hits:0,comment:null,cUser:null}
-					$.ajax({
-						cache:false,
-						url: "http://localhost:8080/BRM/main/review/donewreview",
-						//请求的url地址
-						/* commentid,userid,commentDate,content,INID,bookID,cReported,hits */
-						data: JSON.stringify(data) ,
-						/* data: {commentid:0,commentDate:"",userID:$("#userid").val(),content:$("#content").val(),INID:$("INID").val(),bookID:"",cReported:0,hits:0,comment:null,cUser:null}, */
-						type: "post",
-						//请求方式
-						dataType:"json",
-						 contentType: "application/json",  
-						success: function (data) { 
-							if(data.msg==true){
-								alert("评论成功！");
-								window.location="main/book/"+$("#bookid").val();
-								
-							}else if(data.msg==false){
-								alert("评论失败！")
-								window.location = "main/review/new_review";
-							}
-						}
-					});
-
-				})
-			})
-		</script>
 	</head>
 	<body>
 		<div class="box bookbox">
@@ -112,12 +81,10 @@
 									<div class="icon">
 										<a href="javascript:"><img src="img/login/bg.jpg" /></a>
 									</div>
-									<div class="name"><a href="javascript:"><b>${user.userinfo.uName}</b></a></div>
+									<div class="name"><a href="javascript:"><b>丸户史明</b></a></div>
 								</div>
 								<input type="text" class="revtitle" placeholder="请填写标题" />
-								<textarea id="content" class="commit" placeholder="请输入内容"></textarea>
-								<input type="hidden" id="userid" value="${user.userID}" />	
-								<input type="hidden" id="bookid" value="${book.bookID}" />
+								<textarea class="commit" placeholder="请输入内容"></textarea>
 								<div class="btn">
 									<input id="submit" type="button" value="发表帖子" onclick="this.form.submit()" />
 								</div>

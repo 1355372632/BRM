@@ -18,7 +18,6 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import com.alibaba.fastjson.JSONObject;
 
 import cn.edu.zjweu.dao.UserDao;
-import cn.edu.zjweu.entity.UserInfo;
 import cn.edu.zjweu.entity.Users;
 /**
  * 
@@ -112,13 +111,9 @@ public class UserController {
 	 */
 	@RequestMapping("/doreg")
 	@ResponseBody //必须加入的注解
-	public JSONObject  doreg(Users user,String uName,HttpServletRequest request,Model model) {
+	public JSONObject  doreg(Users user,HttpServletRequest request,Model model) {
 		JSONObject json = new JSONObject();
-		UserInfo ui =new UserInfo(0,user.getUserID(),uName,2,"img\725814.png","暂无描述","男","未婚",java.sql.Date.valueOf("1990-01-01"),"暂无");
-		ui.setuName(uName);
-		ui.setUserID(user.getUserID());
-		user.setUserinfo(ui);
-		System.out.println(user.toString());
+		user.getUserinfo().setuName(user.getUserID());//注册默认昵称为用户名
 		boolean flag = userdao.addUser(user);
 		if(flag){
 			json.put("msg", true);

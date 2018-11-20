@@ -26,7 +26,7 @@ public class UserServiceImplTest {
 	public void init()  {
 		 ApplicationContext ctx = new
 				 ClassPathXmlApplicationContext("classpath:spring/root-context.xml");
-		 userservice = (UserService) ctx.getBean("userservice");
+		 			userservice = (UserService) ctx.getBean("userservice");
 				 System.out.println(userservice.getClass());
 //		 ApplicationContext ctx = new
 //				 ClassPathXmlApplicationContext("classpath:spring/root-context.xml");
@@ -43,13 +43,9 @@ public class UserServiceImplTest {
 
 	@Test
 	public void testAddUser() {
-		Users u = new Users("lib", "111", "111111", 2);
-		UserInfo ui = new UserInfo();
-		ui.setuName("libsssss");
-		ui.setUserID("lib");
-//		UserInfo ui =new UserInfo(0, "lizz", "1111", 2, "sss", "afa", "男", "已婚",java.sql.Date.valueOf("1997-07-25"), "sadasd");
-		u.setUserinfo(ui);
-//		System.out.println(u.toString());
+		Users u = new Users("lin", "111", "111111", 2);
+		u.setUserinfo(new UserInfo(0, u.getUserID(), "1111", 2, "sss", "afa", "男", "已婚",java.sql.Date.valueOf("1997-07-25"), "sadasd"));
+		System.out.println(u.toString());
 		boolean flag=userservice.addUser(u);
 		assertTrue(flag);
 	}

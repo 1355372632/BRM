@@ -91,25 +91,25 @@
 				</div>
 				<div class="review">
 					<dl class="revnav">
-						<dt><a href="javascript:">全部(${comment.size()})</a><a class="sendrev" href="main/new_review">我要发帖</a></dt>
+						<dt><a href="javascript:">全部(666)</a><a class="sendrev" href="new_review.html">我要发帖</a></dt>
 					</dl>
 					<dl class="rev-text">
 					<c:forEach var="c" items="${comment}" varStatus="vs">
 						<dt class="review-post">
 							<div class="usericon">
-								<img src="${user.userinfo.uPicPath}" />
+								<img src="img/login/bg.jpg" />
 							</div>
 							<div class="revpart" >
 								<a class="username" href="javascript:">${c.cUser.userinfo.uName }</a>&nbsp;<span>发表了帖子</span>
 								<div class="textpost">
-									<a class="answer" href="main/review/${book.bookID }/${vs.index}">
+									<a class="answer" href="main/review/${vs.index}">
 										${c.content }										
 									</a>
 								</div>
 								<p></p>
 								<div class="flo">
 									<span class="date">${c.commentDate }</span>
-									<a class="answer" href="main/review/${book.bookID }/${vs.index}"><span>${c.comment.size()}条回复</span></a>
+									<a class="answer" href="review.html"><span>${c.comment.size()}条回复</span></a>
 								</div>
 								<div class="todo">
 									<a class="report" href="javascript:"><span>举报</span></a>

@@ -21,7 +21,7 @@
 		<script type="text/javascript">
 			$(function(){
 				$("#submit").click(function(){
-					
+					alert("111111111111111")
 					var data={userID:$("#userid").val(),content:$("#content").val(),INID:$("#INID").val(),bookID:$("#bookid").val(),cReported:0,hits:0,comment:null,cUser:null}
 					$.ajax({
 						cache:false,
@@ -37,11 +37,11 @@
 						success: function (data) { 
 							if(data.msg==true){
 								alert("评论成功！");
-								window.location="main/review/"+$("#bookid").val()+"/"+$("#indexNum").val();
+								window.location="main/review"+INID;
 								
 							}else if(data.msg==false){
 								alert("评论失败！")
-								window.location = "main/review/"+$("#bookid").val()+$("#indexNum").val();
+								window.location = "main/review"+INID;
 							}
 						}
 					});
@@ -190,7 +190,6 @@
 					</div>
 					<textarea id="content" class="commit" placeholder="请输入回复内容"></textarea>
 					<input type="hidden" id="userid" value="${user.userID}" />
-					<input type="hidden" id="indexNum" value="${indexNum}" />
 					<input type="hidden" id="bookid" value="${comment[indexNum].bookID}" />
 					<input type="hidden" id="INID" value="${comment[indexNum].commentID}" />
 					<div class="btn">
