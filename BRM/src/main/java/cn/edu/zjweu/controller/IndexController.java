@@ -234,13 +234,5 @@ System.out.println(file.getAbsolutePath());
 //		comment.get(0).getcUser().getUserinfo().getuName();
 		model.addAttribute("book",book);
 	}
-	
-	/**
-	 *模糊查询 begin end 值怎么传 
-	 */
-	/*@RequestMapping("search")
-	public void  doSearch(@PathVariable String  bookname) {
-		Book book = bookservice.getBooksByFuzzyName(bookname, begin, end);
-	}*/
 	 
 }

@@ -27,7 +27,7 @@
 					<div class="menubg bookmenubg"></div>
 					<div class="menu">
 						<dl>
-							<dt><a href="<%=basePath%>"><span>首页</span></a></dt>
+							<dt><a href="index.html"><span>首页</span></a></dt>
 							<dt>
 							<a href="light.jsp"><span>轻小说</span></a>
 						</dt>
